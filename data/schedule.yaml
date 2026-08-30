@@ -1,0 +1,104 @@
+# Transcribed by hand from fiba-womens-basketball-world-cup-208875-game-schedule.pdf
+# (pdftotext -layout). The PDF lists each tip-off twice: Berlin local and GMT.
+# Berlin is CEST (UTC+2) in September and every pair differs by exactly 2h, so the
+# GMT column is true UTC -- that is what is stored here. All display timezones are
+# derived from it.
+#
+# `number` is OUR key, 1..36, chronological. It is NOT FIBA's game number (theirs is
+# per-group: 29919-A-1 .. 29919-D-6). data/fiba_scraped.yaml maps between them.
+
+tournament:
+  name: FIBA Women's Basketball World Cup 2026
+  city: Berlin
+  local_tz: Europe/Berlin
+  fiba_event_slug: fiba-womens-basketball-world-cup-2026
+  # Two arenas run parallel slots (note the duplicate 09:30 UTC tip-offs). The PDF's
+  # column layout does not say which game is where, so venue stays null until the
+  # scrape or the FIBA site confirms it.
+  venues:
+    - Berlin Arena
+    - Max-Schmeling-Halle
+
+groups:
+  A: [JPN, ESP, GER, MLI]
+  B: [HUN, KOR, NGR, FRA]
+  C: [BEL, AUS, PUR, TUR]
+  D: [USA, CZE, ITA, CHN]
+
+teams:
+  JPN: {name: Japan,        flag: "🇯🇵"}
+  ESP: {name: Spain,        flag: "🇪🇸"}
+  GER: {name: Germany,      flag: "🇩🇪"}
+  MLI: {name: Mali,         flag: "🇲🇱"}
+  HUN: {name: Hungary,      flag: "🇭🇺"}
+  KOR: {name: Korea,        flag: "🇰🇷"}
+  NGR: {name: Nigeria,      flag: "🇳🇬"}
+  FRA: {name: France,       flag: "🇫🇷"}
+  BEL: {name: Belgium,      flag: "🇧🇪"}
+  AUS: {name: Australia,    flag: "🇦🇺"}
+  PUR: {name: Puerto Rico,  flag: "🇵🇷"}
+  TUR: {name: Türkiye,      flag: "🇹🇷"}
+  USA: {name: USA,          flag: "🇺🇸"}
+  CZE: {name: Czechia,      flag: "🇨🇿"}
+  ITA: {name: Italy,        flag: "🇮🇹"}
+  CHN: {name: China,        flag: "🇨🇳"}
+
+games:
+  # ---- Friday 4 September ----
+  - {number: 1,  phase: group, group: A, date_utc: 2026-09-04, tip_utc: "09:30", home: JPN, away: MLI}
+  - {number: 2,  phase: group, group: B, date_utc: 2026-09-04, tip_utc: "12:30", home: KOR, away: NGR}
+  - {number: 3,  phase: group, group: A, date_utc: 2026-09-04, tip_utc: "15:45", home: ESP, away: GER}
+  - {number: 4,  phase: group, group: B, date_utc: 2026-09-04, tip_utc: "19:00", home: HUN, away: FRA}
+  - {number: 5,  phase: group, group: C, date_utc: 2026-09-04, tip_utc: "09:30", home: AUS, away: PUR}
+  - {number: 6,  phase: group, group: D, date_utc: 2026-09-04, tip_utc: "12:15", home: USA, away: CHN}
+  - {number: 7,  phase: group, group: C, date_utc: 2026-09-04, tip_utc: "15:30", home: BEL, away: TUR}
+  - {number: 8,  phase: group, group: D, date_utc: 2026-09-04, tip_utc: "18:15", home: CZE, away: ITA}
+
+  # ---- Saturday 5 September ----
+  - {number: 9,  phase: group, group: A, date_utc: 2026-09-05, tip_utc: "09:30", home: MLI, away: ESP}
+  - {number: 10, phase: group, group: B, date_utc: 2026-09-05, tip_utc: "12:15", home: NGR, away: HUN}
+  - {number: 11, phase: group, group: A, date_utc: 2026-09-05, tip_utc: "16:00", home: GER, away: JPN}
+  - {number: 12, phase: group, group: B, date_utc: 2026-09-05, tip_utc: "18:45", home: FRA, away: KOR}
+
+  # ---- Sunday 6 September ----
+  - {number: 13, phase: group, group: C, date_utc: 2026-09-06, tip_utc: "09:30", home: TUR, away: AUS}
+  - {number: 14, phase: group, group: D, date_utc: 2026-09-06, tip_utc: "12:30", home: CHN, away: CZE}
+  - {number: 15, phase: group, group: C, date_utc: 2026-09-06, tip_utc: "15:45", home: PUR, away: BEL}
+  - {number: 16, phase: group, group: D, date_utc: 2026-09-06, tip_utc: "18:45", home: ITA, away: USA}
+
+  # ---- Monday 7 September ----
+  - {number: 17, phase: group, group: C, date_utc: 2026-09-07, tip_utc: "09:30", home: BEL, away: AUS}
+  - {number: 18, phase: group, group: B, date_utc: 2026-09-07, tip_utc: "12:30", home: NGR, away: FRA}
+  - {number: 19, phase: group, group: A, date_utc: 2026-09-07, tip_utc: "15:50", home: GER, away: MLI}
+  - {number: 20, phase: group, group: D, date_utc: 2026-09-07, tip_utc: "18:45", home: USA, away: CZE}
+  - {number: 21, phase: group, group: C, date_utc: 2026-09-07, tip_utc: "09:30", home: PUR, away: TUR}
+  - {number: 22, phase: group, group: B, date_utc: 2026-09-07, tip_utc: "12:30", home: HUN, away: KOR}
+  - {number: 23, phase: group, group: A, date_utc: 2026-09-07, tip_utc: "15:50", home: JPN, away: ESP}
+  - {number: 24, phase: group, group: D, date_utc: 2026-09-07, tip_utc: "18:45", home: ITA, away: CHN}
+
+  # ---- Final phase ----
+  # "The order of the games from 8 to 12 September will be announced at the end of the
+  # respective previous round." Games with tip_utc_options have two candidate slots.
+  # To resolve one: set home/away and replace tip_utc_options with a single tip_utc.
+
+  # Qualification to quarter-finals, Tuesday 8 September
+  - {number: 25, phase: qualification, label: "2nd A - 3rd B", date_utc: 2026-09-08, tip_utc_options: ["15:45", "18:45"], home: null, away: null}
+  - {number: 26, phase: qualification, label: "2nd B - 3rd A", date_utc: 2026-09-08, tip_utc_options: ["15:45", "18:45"], home: null, away: null}
+
+  # Qualification to quarter-finals, Wednesday 9 September
+  - {number: 27, phase: qualification, label: "3rd D - 2nd C", date_utc: 2026-09-09, tip_utc_options: ["15:45", "18:45"], home: null, away: null}
+  - {number: 28, phase: qualification, label: "3rd C - 2nd D", date_utc: 2026-09-09, tip_utc_options: ["15:45", "18:45"], home: null, away: null}
+
+  # Quarter-finals, Thursday 10 September (times fixed, pairings from the PDF)
+  - {number: 29, phase: quarter_final, label: "Quarter-Final 1: W27 - 1st A", date_utc: 2026-09-10, tip_utc: "09:30", home: null, away: null}
+  - {number: 30, phase: quarter_final, label: "Quarter-Final 2: W28 - 1st B", date_utc: 2026-09-10, tip_utc: "12:30", home: null, away: null}
+  - {number: 31, phase: quarter_final, label: "Quarter-Final 3: 1st C - W25", date_utc: 2026-09-10, tip_utc: "15:45", home: null, away: null}
+  - {number: 32, phase: quarter_final, label: "Quarter-Final 4: 1st D - W26", date_utc: 2026-09-10, tip_utc: "18:45", home: null, away: null}
+
+  # Semi-finals, Saturday 12 September
+  - {number: 33, phase: semi_final, label: "Semi-Final: W29 - W32", date_utc: 2026-09-12, tip_utc_options: ["14:30", "18:00"], home: null, away: null}
+  - {number: 34, phase: semi_final, label: "Semi-Final: W30 - W31", date_utc: 2026-09-12, tip_utc_options: ["14:30", "18:00"], home: null, away: null}
+
+  # Sunday 13 September
+  - {number: 35, phase: third_place, label: "3rd Place Game", date_utc: 2026-09-13, tip_utc: "14:30", home: null, away: null}
+  - {number: 36, phase: final,       label: "Final",          date_utc: 2026-09-13, tip_utc: "18:00", home: null, away: null}

@@ -1,0 +1,727 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//fiba-wwc//FIBA Women's World Cup 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FIBA Women's Basketball World Cup 2026
+X-WR-CALDESC:All 36 games\, with WNBA players and US broadcast listings.
+X-WR-TIMEZONE:UTC
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+SOURCE;VALUE=URI:https://anyasabo.github.io/fiba/fiba.ics
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-1@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260904T093000Z
+DTEND:20260904T113000Z
+SEQUENCE:0
+SUMMARY:🏀 🇯🇵 Japan vs Mali 🇲🇱 — Group A
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nJapan — WNBA players:\n  Las Vegas Aces: Mai Yamamoto\n\nMali 
+ — WNBA players:\n  Atlanta Dream: Sika Kone (unconfirmed)\n\nhttps://www
+ .fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128
+ 116-JPN-MLI
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128116-JPN-MLI
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-5@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260904T093000Z
+DTEND:20260904T113000Z
+SEQUENCE:0
+SUMMARY:🏀 🇦🇺 Australia vs Puerto Rico 🇵🇷 — Group C
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nAustralia — WNBA players:\n  Atlanta Dream: Isobel Borlase\n  Da
+ llas Wings: Alanna Smith\n  Golden State Valkyries: Miela Sowha\n  Las Veg
+ as Aces: Stephanie Talbot\n  Minnesota Lynx: Chloe Bibby\n  Seattle Storm:
+  Ezi Magbegor\, Jade Melbourne\n\nhttps://www.fiba.basketball/en/events/fi
+ ba-womens-basketball-world-cup-2026/games/128129-AUS-PUR
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128129-AUS-PUR
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-6@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260904T121500Z
+DTEND:20260904T141500Z
+SEQUENCE:0
+SUMMARY:🏀 🇺🇸 USA vs China 🇨🇳 — Group D
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, TNT (https://www.tntsports.co
+ m/)\n\nUSA — WNBA players:\n  Atlanta Dream: Angel Reese\, Rhyne Howard\
+ n  Dallas Wings: Paige Bueckers\n  Indiana Fever: Aliyah Boston\, Caitlin 
+ Clark\n  Las Vegas Aces: A'ja Wilson\, Chelsea Gray\, Jackie Young\n  Minn
+ esota Lynx: Napheesa Collier\n  New York Liberty: Breanna Stewart\n  Phoen
+ ix Mercury: Kahleah Copper\, Kelsey Plum\n\nChina — WNBA players:\n  Dal
+ las Wings: Li Yueru (unconfirmed)\n  New York Liberty: Han Xu (unconfirmed
+ )\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-world-cu
+ p-2026/games/128134-USA-CHN
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128134-USA-CHN
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-2@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260904T123000Z
+DTEND:20260904T143000Z
+SEQUENCE:0
+SUMMARY:🏀 🇰🇷 Korea vs Nigeria 🇳🇬 — Group B
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nKorea — WNBA players:\n  Los Angeles Sparks: Jihyun Park\n\nhttp
+ s://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/ga
+ mes/128123-KOR-NGR
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128123-KOR-NGR
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-7@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260904T153000Z
+DTEND:20260904T173000Z
+SEQUENCE:0
+SUMMARY:🏀 🇧🇪 Belgium vs Türkiye 🇹🇷 — Group C
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nBelgium — WNBA players:\n  Minnesota Lynx: Antonia Delaere\n  Ph
+ oenix Mercury: Kyara Linskens\n  Toronto Tempo: Julie Allemand\n\nTürkiye
+  — WNBA players:\n  Connecticut Sun: Kennedy Burke\n\nhttps://www.fiba.b
+ asketball/en/events/fiba-womens-basketball-world-cup-2026/games/128128-BEL
+ -TUR
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128128-BEL-TUR
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-3@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260904T154500Z
+DTEND:20260904T174500Z
+SEQUENCE:0
+SUMMARY:🏀 🇪🇸 Spain vs Germany 🇩🇪 — Group A
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, TNT (https://www.tntsports.co
+ m/)\n\nSpain — WNBA players:\n  New York Liberty: Raquel Carrera (unconf
+ irmed)\n  Portland Fire: Megan DiLeo (unconfirmed)\n  Seattle Storm: Awa F
+ am\n  Toronto Tempo: Maria Conde\n  Washington Mystics: Alicia Florenz (un
+ confirmed)\n\nGermany — WNBA players:\n  New York Liberty: Leonie Fiebic
+ h (unconfirmed)\n  Portland Fire: Frieda Bühner\, Luisa Geiselsöder\n  T
+ oronto Tempo: Nyara Sabally\n\nhttps://www.fiba.basketball/en/events/fiba-
+ womens-basketball-world-cup-2026/games/128117-ESP-GER
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128117-ESP-GER
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-8@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260904T181500Z
+DTEND:20260904T201500Z
+SEQUENCE:0
+SUMMARY:🏀 🇨🇿 Czechia vs Italy 🇮🇹 — Group D
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nCzechia — WNBA players:\n  Minnesota Lynx: Eliska Joklava\n\nIta
+ ly — WNBA players:\n  Dallas Wings: Costanza Verona (unconfirmed)\n  Gol
+ den State Valkyries: Cecilia Zandalasini\n\nhttps://www.fiba.basketball/en
+ /events/fiba-womens-basketball-world-cup-2026/games/128135-CZE-ITA
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128135-CZE-ITA
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-4@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260904T190000Z
+DTEND:20260904T210000Z
+SEQUENCE:0
+SUMMARY:🏀 🇭🇺 Hungary vs France 🇫🇷 — Group B
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, TNT (https://www.tntsports.co
+ m/)\n\nHungary — WNBA players:\n  Minnesota Lynx: Dorka Juhasz\n\nFrance
+  — WNBA players:\n  Connecticut Sun: Leïla Lacan\n  Golden State Valkyr
+ ies: Gabby Williams\, Janelle Salaün\n  New York Liberty: Marine Johannes
+ \, Pauline Astier\n  Phoenix Mercury: Valariane Ayayi\n  Portland Fire: Ca
+ rla Leite\n  Seattle Storm: Dominique Malonga\n\nhttps://www.fiba.basketba
+ ll/en/events/fiba-womens-basketball-world-cup-2026/games/128122-HUN-FRA
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128122-HUN-FRA
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-9@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260905T093000Z
+DTEND:20260905T113000Z
+SEQUENCE:0
+SUMMARY:🏀 🇲🇱 Mali vs Spain 🇪🇸 — Group A
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nMali — WNBA players:\n  Atlanta Dream: Sika Kone (unconfirmed)\n
+ \nSpain — WNBA players:\n  New York Liberty: Raquel Carrera (unconfirmed
+ )\n  Portland Fire: Megan DiLeo (unconfirmed)\n  Seattle Storm: Awa Fam\n 
+  Toronto Tempo: Maria Conde\n  Washington Mystics: Alicia Florenz (unconfi
+ rmed)\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-worl
+ d-cup-2026/games/128119-MLI-ESP
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128119-MLI-ESP
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-10@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260905T121500Z
+DTEND:20260905T141500Z
+SEQUENCE:0
+SUMMARY:🏀 🇳🇬 Nigeria vs Hungary 🇭🇺 — Group B
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nHungary — WNBA players:\n  Minnesota Lynx: Dorka Juhasz\n\nhttps
+ ://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/gam
+ es/128124-NGR-HUN
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128124-NGR-HUN
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-11@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260905T160000Z
+DTEND:20260905T180000Z
+SEQUENCE:0
+SUMMARY:🏀 🇩🇪 Germany vs Japan 🇯🇵 — Group A
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nGermany — WNBA players:\n  New York Liberty: Leonie Fiebich (unc
+ onfirmed)\n  Portland Fire: Frieda Bühner\, Luisa Geiselsöder\n  Toronto
+  Tempo: Nyara Sabally\n\nJapan — WNBA players:\n  Las Vegas Aces: Mai Ya
+ mamoto\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-wor
+ ld-cup-2026/games/128118-GER-JPN
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128118-GER-JPN
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-12@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260905T184500Z
+DTEND:20260905T204500Z
+SEQUENCE:0
+SUMMARY:🏀 🇫🇷 France vs Korea 🇰🇷 — Group B
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nFrance — WNBA players:\n  Connecticut Sun: Leïla Lacan\n  Golde
+ n State Valkyries: Gabby Williams\, Janelle Salaün\n  New York Liberty: M
+ arine Johannes\, Pauline Astier\n  Phoenix Mercury: Valariane Ayayi\n  Por
+ tland Fire: Carla Leite\n  Seattle Storm: Dominique Malonga\n\nKorea — W
+ NBA players:\n  Los Angeles Sparks: Jihyun Park\n\nhttps://www.fiba.basket
+ ball/en/events/fiba-womens-basketball-world-cup-2026/games/128125-FRA-KOR
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128125-FRA-KOR
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-13@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260906T093000Z
+DTEND:20260906T113000Z
+SEQUENCE:0
+SUMMARY:🏀 🇹🇷 Türkiye vs Australia 🇦🇺 — Group C
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nTürkiye — WNBA players:\n  Connecticut Sun: Kennedy Burke\n\nAu
+ stralia — WNBA players:\n  Atlanta Dream: Isobel Borlase\n  Dallas Wings
+ : Alanna Smith\n  Golden State Valkyries: Miela Sowha\n  Las Vegas Aces: S
+ tephanie Talbot\n  Minnesota Lynx: Chloe Bibby\n  Seattle Storm: Ezi Magbe
+ gor\, Jade Melbourne\n\nhttps://www.fiba.basketball/en/events/fiba-womens-
+ basketball-world-cup-2026/games/128131-TUR-AUS
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128131-TUR-AUS
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-14@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260906T123000Z
+DTEND:20260906T143000Z
+SEQUENCE:0
+SUMMARY:🏀 🇨🇳 China vs Czechia 🇨🇿 — Group D
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nChina — WNBA players:\n  Dallas Wings: Li Yueru (unconfirmed)\n 
+  New York Liberty: Han Xu (unconfirmed)\n\nCzechia — WNBA players:\n  Mi
+ nnesota Lynx: Eliska Joklava\n\nhttps://www.fiba.basketball/en/events/fiba
+ -womens-basketball-world-cup-2026/games/128137-CHN-CZE
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128137-CHN-CZE
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-15@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260906T154500Z
+DTEND:20260906T174500Z
+SEQUENCE:0
+SUMMARY:🏀 🇵🇷 Puerto Rico vs Belgium 🇧🇪 — Group C
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, TNT (https://www.tntsports.co
+ m/)\n\nBelgium — WNBA players:\n  Minnesota Lynx: Antonia Delaere\n  Pho
+ enix Mercury: Kyara Linskens\n  Toronto Tempo: Julie Allemand\n\nhttps://w
+ ww.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/1
+ 28130-PUR-BEL
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128130-PUR-BEL
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-16@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260906T184500Z
+DTEND:20260906T204500Z
+SEQUENCE:0
+SUMMARY:🏀 🇮🇹 Italy vs USA 🇺🇸 — Group D
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, TNT (https://www.tntsports.co
+ m/)\n\nItaly — WNBA players:\n  Dallas Wings: Costanza Verona (unconfirm
+ ed)\n  Golden State Valkyries: Cecilia Zandalasini\n\nUSA — WNBA players
+ :\n  Atlanta Dream: Angel Reese\, Rhyne Howard\n  Dallas Wings: Paige Buec
+ kers\n  Indiana Fever: Aliyah Boston\, Caitlin Clark\n  Las Vegas Aces: A'
+ ja Wilson\, Chelsea Gray\, Jackie Young\n  Minnesota Lynx: Napheesa Collie
+ r\n  New York Liberty: Breanna Stewart\n  Phoenix Mercury: Kahleah Copper\
+ , Kelsey Plum\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketb
+ all-world-cup-2026/games/128136-ITA-USA
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128136-ITA-USA
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-17@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260907T093000Z
+DTEND:20260907T113000Z
+SEQUENCE:0
+SUMMARY:🏀 🇧🇪 Belgium vs Australia 🇦🇺 — Group C
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nBelgium — WNBA players:\n  Minnesota Lynx: Antonia Delaere\n  Ph
+ oenix Mercury: Kyara Linskens\n  Toronto Tempo: Julie Allemand\n\nAustrali
+ a — WNBA players:\n  Atlanta Dream: Isobel Borlase\n  Dallas Wings: Alan
+ na Smith\n  Golden State Valkyries: Miela Sowha\n  Las Vegas Aces: Stephan
+ ie Talbot\n  Minnesota Lynx: Chloe Bibby\n  Seattle Storm: Ezi Magbegor\, 
+ Jade Melbourne\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basket
+ ball-world-cup-2026/games/128132-BEL-AUS
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128132-BEL-AUS
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-21@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260907T093000Z
+DTEND:20260907T113000Z
+SEQUENCE:0
+SUMMARY:🏀 🇵🇷 Puerto Rico vs Türkiye 🇹🇷 — Group C
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nTürkiye — WNBA players:\n  Connecticut Sun: Kennedy Burke\n\nht
+ tps://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/
+ games/128133-PUR-TUR
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128133-PUR-TUR
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-18@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260907T123000Z
+DTEND:20260907T143000Z
+SEQUENCE:0
+SUMMARY:🏀 🇳🇬 Nigeria vs France 🇫🇷 — Group B
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, TNT (https://www.tntsports.co
+ m/)\n\nFrance — WNBA players:\n  Connecticut Sun: Leïla Lacan\n  Golden
+  State Valkyries: Gabby Williams\, Janelle Salaün\n  New York Liberty: Ma
+ rine Johannes\, Pauline Astier\n  Phoenix Mercury: Valariane Ayayi\n  Port
+ land Fire: Carla Leite\n  Seattle Storm: Dominique Malonga\n\nhttps://www.
+ fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/1281
+ 27-NGR-FRA
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128127-NGR-FRA
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-22@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260907T123000Z
+DTEND:20260907T143000Z
+SEQUENCE:0
+SUMMARY:🏀 🇭🇺 Hungary vs Korea 🇰🇷 — Group B
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nHungary — WNBA players:\n  Minnesota Lynx: Dorka Juhasz\n\nKorea
+  — WNBA players:\n  Los Angeles Sparks: Jihyun Park\n\nhttps://www.fiba.
+ basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128126-HU
+ N-KOR
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128126-HUN-KOR
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-19@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260907T155000Z
+DTEND:20260907T175000Z
+SEQUENCE:0
+SUMMARY:🏀 🇩🇪 Germany vs Mali 🇲🇱 — Group A
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nGermany — WNBA players:\n  New York Liberty: Leonie Fiebich (unc
+ onfirmed)\n  Portland Fire: Frieda Bühner\, Luisa Geiselsöder\n  Toronto
+  Tempo: Nyara Sabally\n\nMali — WNBA players:\n  Atlanta Dream: Sika Kon
+ e (unconfirmed)\n\nhttps://www.fiba.basketball/en/events/fiba-womens-baske
+ tball-world-cup-2026/games/128121-GER-MLI
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128121-GER-MLI
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-23@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260907T155000Z
+DTEND:20260907T175000Z
+SEQUENCE:0
+SUMMARY:🏀 🇯🇵 Japan vs Spain 🇪🇸 — Group A
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, TNT (https://www.tntsports.co
+ m/)\n\nJapan — WNBA players:\n  Las Vegas Aces: Mai Yamamoto\n\nSpain 
+ — WNBA players:\n  New York Liberty: Raquel Carrera (unconfirmed)\n  Por
+ tland Fire: Megan DiLeo (unconfirmed)\n  Seattle Storm: Awa Fam\n  Toronto
+  Tempo: Maria Conde\n  Washington Mystics: Alicia Florenz (unconfirmed)\n\
+ nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-20
+ 26/games/128120-JPN-ESP
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128120-JPN-ESP
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-20@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260907T184500Z
+DTEND:20260907T204500Z
+SEQUENCE:0
+SUMMARY:🏀 🇺🇸 USA vs Czechia 🇨🇿 — Group D
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, TNT (https://www.tntsports.co
+ m/)\n\nUSA — WNBA players:\n  Atlanta Dream: Angel Reese\, Rhyne Howard\
+ n  Dallas Wings: Paige Bueckers\n  Indiana Fever: Aliyah Boston\, Caitlin 
+ Clark\n  Las Vegas Aces: A'ja Wilson\, Chelsea Gray\, Jackie Young\n  Minn
+ esota Lynx: Napheesa Collier\n  New York Liberty: Breanna Stewart\n  Phoen
+ ix Mercury: Kahleah Copper\, Kelsey Plum\n\nCzechia — WNBA players:\n  M
+ innesota Lynx: Eliska Joklava\n\nhttps://www.fiba.basketball/en/events/fib
+ a-womens-basketball-world-cup-2026/games/128138-USA-CZE
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128138-USA-CZE
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-24@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260907T184500Z
+DTEND:20260907T204500Z
+SEQUENCE:0
+SUMMARY:🏀 🇮🇹 Italy vs China 🇨🇳 — Group D
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\, HBOMax (https://play.hbomax.c
+ om/)\n\nItaly — WNBA players:\n  Dallas Wings: Costanza Verona (unconfir
+ med)\n  Golden State Valkyries: Cecilia Zandalasini\n\nChina — WNBA play
+ ers:\n  Dallas Wings: Li Yueru (unconfirmed)\n  New York Liberty: Han Xu (
+ unconfirmed)\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketba
+ ll-world-cup-2026/games/128139-ITA-CHN
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Max-Schmeling-Halle\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128139-ITA-CHN
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-25@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260908T184500Z
+DTEND:20260908T204500Z
+SEQUENCE:0
+SUMMARY:🏀 2nd A - 3rd B (TBD) — Qualification to QF
+DESCRIPTION:Watch (US): not yet listed\n\nTip-off slot not yet assigned\; t
+ his is the later of the two candidate slots and will move once FIBA confir
+ ms it.\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-wor
+ ld-cup-2026/games/128144
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128144
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-26@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260908T184500Z
+DTEND:20260908T204500Z
+SEQUENCE:0
+SUMMARY:🏀 2nd B - 3rd A (TBD) — Qualification to QF
+DESCRIPTION:Watch (US): not yet listed\n\nTip-off slot not yet assigned\; t
+ his is the later of the two candidate slots and will move once FIBA confir
+ ms it.\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-wor
+ ld-cup-2026/games/128145
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128145
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-27@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260909T184500Z
+DTEND:20260909T204500Z
+SEQUENCE:0
+SUMMARY:🏀 3rd D - 2nd C (TBD) — Qualification to QF
+DESCRIPTION:Watch (US): not yet listed\n\nTip-off slot not yet assigned\; t
+ his is the later of the two candidate slots and will move once FIBA confir
+ ms it.\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-wor
+ ld-cup-2026/games/128146
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128146
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-28@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260909T184500Z
+DTEND:20260909T204500Z
+SEQUENCE:0
+SUMMARY:🏀 3rd C - 2nd D (TBD) — Qualification to QF
+DESCRIPTION:Watch (US): not yet listed\n\nTip-off slot not yet assigned\; t
+ his is the later of the two candidate slots and will move once FIBA confir
+ ms it.\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-wor
+ ld-cup-2026/games/128147
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128147
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-29@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260910T093000Z
+DTEND:20260910T113000Z
+SEQUENCE:0
+SUMMARY:🏀 Quarter-Final 1: W27 - 1st A (TBD) — Quarter-Final
+DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
+ ents/fiba-womens-basketball-world-cup-2026/games/128148
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128148
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-30@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260910T123000Z
+DTEND:20260910T143000Z
+SEQUENCE:0
+SUMMARY:🏀 Quarter-Final 2: W28 - 1st B (TBD) — Quarter-Final
+DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
+ ents/fiba-womens-basketball-world-cup-2026/games/128149
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128149
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-31@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260910T154500Z
+DTEND:20260910T174500Z
+SEQUENCE:0
+SUMMARY:🏀 Quarter-Final 3: 1st C - W25 (TBD) — Quarter-Final
+DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
+ ents/fiba-womens-basketball-world-cup-2026/games/128150
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128150
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-32@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260910T184500Z
+DTEND:20260910T204500Z
+SEQUENCE:0
+SUMMARY:🏀 Quarter-Final 4: 1st D - W26 (TBD) — Quarter-Final
+DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
+ ents/fiba-womens-basketball-world-cup-2026/games/128151
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128151
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-33@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260912T180000Z
+DTEND:20260912T200000Z
+SEQUENCE:0
+SUMMARY:🏀 Semi-Final: W29 - W32 (TBD) — Semi-Final
+DESCRIPTION:Watch (US): not yet listed\n\nTip-off slot not yet assigned\; t
+ his is the later of the two candidate slots and will move once FIBA confir
+ ms it.\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-wor
+ ld-cup-2026/games/128152
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128152
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-34@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260912T180000Z
+DTEND:20260912T200000Z
+SEQUENCE:0
+SUMMARY:🏀 Semi-Final: W30 - W31 (TBD) — Semi-Final
+DESCRIPTION:Watch (US): not yet listed\n\nTip-off slot not yet assigned\; t
+ his is the later of the two candidate slots and will move once FIBA confir
+ ms it.\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-wor
+ ld-cup-2026/games/128153
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128153
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-35@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260913T143000Z
+DTEND:20260913T163000Z
+SEQUENCE:0
+SUMMARY:🏀 3rd Place Game (TBD) — 3rd Place
+DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
+ ents/fiba-womens-basketball-world-cup-2026/games/128154
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128154
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:fiba-wwc-2026-game-36@fiba-wwc.invalid
+DTSTAMP:20260830T221254Z
+DTSTART:20260913T180000Z
+DTEND:20260913T200000Z
+SEQUENCE:0
+SUMMARY:🏀 Final (TBD) — Final
+DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
+ ents/fiba-womens-basketball-world-cup-2026/games/128155
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+LOCATION:Berlin Arena\, Berlin\, Germany
+URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
+ 2026/games/128155
+CATEGORIES:Basketball\,FIBA Women World Cup 2026
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,34 @@
+# WNBA clubs for the 2026 season (15 teams, including the Toronto Tempo and
+# Portland Fire expansion sides).
+#
+# logo_id is the WNBA CDN team id, resolved from https://www.wnba.com/teams:
+#   https://cdn.wnba.com/logos/wnba/{logo_id}/primary/L/logo.{svg,png}
+# `fiba-wwc fetch-logos` downloads these into assets/logos/{abbr}.{svg,png}.
+#
+# primary/secondary are the clubs' OFFICIAL brand hex values (teamcolorcodes /
+# trucolor). They are not always identical to the fills inside the logo art --
+# where they differ, the brand value is the right one for UI chrome.
+#
+# Exception, deliberately: Toronto. Some colour directories list the Tempo as
+# royal blue #0050B5, but the fill in Toronto's own primary logo SVG on the WNBA
+# CDN is plum #441E36, and the rendered mark is visibly plum. The logo wins.
+#
+# Colours are DECORATION ONLY. Every rendered player row carries the club
+# abbreviation as text beside the logo, so the output stays readable on a
+# black-and-white printer with no colour at all.
+
+ATL: {name: Atlanta Dream,          city: Atlanta,       logo_id: 1611661330, primary: "#C8102E", secondary: "#418FDE"}
+CHI: {name: Chicago Sky,            city: Chicago,       logo_id: 1611661329, primary: "#418FDE", secondary: "#FFCD00"}
+CON: {name: Connecticut Sun,        city: Connecticut,   logo_id: 1611661323, primary: "#FF671F", secondary: "#0C2340"}
+DAL: {name: Dallas Wings,           city: Dallas,        logo_id: 1611661321, primary: "#0C2340", secondary: "#C4D600"}
+GSV: {name: Golden State Valkyries, city: Golden State,  logo_id: 1611661331, primary: "#AD96DC", secondary: "#010101"}
+IND: {name: Indiana Fever,          city: Indiana,       logo_id: 1611661325, primary: "#041E42", secondary: "#FFCD00"}
+LVA: {name: Las Vegas Aces,         city: Las Vegas,     logo_id: 1611661319, primary: "#BA0C2F", secondary: "#000000"}
+LAS: {name: Los Angeles Sparks,     city: Los Angeles,   logo_id: 1611661320, primary: "#4A2583", secondary: "#FFC72C"}
+MIN: {name: Minnesota Lynx,         city: Minnesota,     logo_id: 1611661324, primary: "#0C2340", secondary: "#236192"}
+NYL: {name: New York Liberty,       city: New York,      logo_id: 1611661313, primary: "#6ECEB2", secondary: "#000000"}
+PHX: {name: Phoenix Mercury,        city: Phoenix,       logo_id: 1611661317, primary: "#1D1160", secondary: "#E56020"}
+POR: {name: Portland Fire,          city: Portland,      logo_id: 1611661327, primary: "#BA0C2F", secondary: "#000000"}
+SEA: {name: Seattle Storm,          city: Seattle,       logo_id: 1611661328, primary: "#2C5234", secondary: "#FBE122"}
+TOR: {name: Toronto Tempo,          city: Toronto,       logo_id: 1611661332, primary: "#441E36", secondary: "#8A8D8F"}
+WAS: {name: Washington Mystics,     city: Washington,    logo_id: 1611661322, primary: "#0C2340", secondary: "#C8102E"}

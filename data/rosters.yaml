@@ -1,0 +1,92 @@
+# WNBA players on 2026 FIBA World Cup national teams.
+#
+# Transcribed by hand from High Post Hoops, "Every WNBA player who will
+# play in the 2026 FIBA World Cup in Berlin", 7 Aug 2026.
+# Re-download it with `uv run fiba-wwc fetch-sources`.
+#
+# status: confirmed   -- named on a finalised national-team roster
+#         unconfirmed -- in a preselect pool / expected but not yet named.
+#                        These came from the article's "Others:" paragraphs.
+#
+# Keyed by FIBA tricode (must match data/schedule.yaml `teams`). Nigeria and
+# Puerto Rico have no WNBA players in the source article and so have no entry.
+#
+# To update as rosters firm up: flip a status to confirmed, or add a line.
+
+USA:
+  - {name: Angel Reese,        wnba: ATL, status: confirmed}
+  - {name: Rhyne Howard,       wnba: ATL, status: confirmed}
+  - {name: Paige Bueckers,     wnba: DAL, status: confirmed}
+  - {name: Aliyah Boston,      wnba: IND, status: confirmed}
+  - {name: Caitlin Clark,      wnba: IND, status: confirmed}
+  - {name: A'ja Wilson,        wnba: LVA, status: confirmed}
+  - {name: Jackie Young,       wnba: LVA, status: confirmed}
+  - {name: Chelsea Gray,       wnba: LVA, status: confirmed}
+  - {name: Napheesa Collier,   wnba: MIN, status: confirmed}
+  - {name: Breanna Stewart,    wnba: NYL, status: confirmed}
+  - {name: Kelsey Plum,        wnba: PHX, status: confirmed}
+  - {name: Kahleah Copper,     wnba: PHX, status: confirmed}
+
+AUS:
+  - {name: Isobel Borlase,     wnba: ATL, status: confirmed}
+  - {name: Alanna Smith,       wnba: DAL, status: confirmed}
+  - {name: Miela Sowha,        wnba: GSV, status: confirmed}
+  - {name: Stephanie Talbot,   wnba: LVA, status: confirmed}
+  - {name: Chloe Bibby,        wnba: MIN, status: confirmed}
+  - {name: Ezi Magbegor,       wnba: SEA, status: confirmed}
+  - {name: Jade Melbourne,     wnba: SEA, status: confirmed}
+
+FRA:
+  - {name: Leïla Lacan,        wnba: CON, status: confirmed}
+  - {name: Gabby Williams,     wnba: GSV, status: confirmed}
+  - {name: Janelle Salaün,     wnba: GSV, status: confirmed}
+  - {name: Pauline Astier,     wnba: NYL, status: confirmed}
+  - {name: Marine Johannes,    wnba: NYL, status: confirmed}
+  - {name: Valariane Ayayi,    wnba: PHX, status: confirmed}
+  - {name: Carla Leite,        wnba: POR, status: confirmed}
+  - {name: Dominique Malonga,  wnba: SEA, status: confirmed}
+
+BEL:
+  - {name: Antonia Delaere,    wnba: MIN, status: confirmed}
+  - {name: Kyara Linskens,     wnba: PHX, status: confirmed}
+  - {name: Julie Allemand,     wnba: TOR, status: confirmed}
+
+GER:
+  - {name: Frieda Bühner,      wnba: POR, status: confirmed}
+  - {name: Luisa Geiselsöder,  wnba: POR, status: confirmed}
+  - {name: Nyara Sabally,      wnba: TOR, status: confirmed}
+  # Satou Sabally has been ruled out. Fiebich is hoped for but unannounced.
+  - {name: Leonie Fiebich,     wnba: NYL, status: unconfirmed}
+
+ESP:
+  - {name: Awa Fam,            wnba: SEA, status: confirmed}
+  - {name: Maria Conde,        wnba: TOR, status: confirmed}
+  - {name: Raquel Carrera,     wnba: NYL, status: unconfirmed}
+  - {name: Megan DiLeo,        wnba: POR, status: unconfirmed}
+  - {name: Alicia Florenz,     wnba: WAS, status: unconfirmed}
+
+ITA:
+  - {name: Cecilia Zandalasini, wnba: GSV, status: confirmed}
+  - {name: Costanza Verona,     wnba: DAL, status: unconfirmed}
+
+CHN:
+  - {name: Li Yueru,           wnba: DAL, status: unconfirmed}
+  - {name: Han Xu,             wnba: NYL, status: unconfirmed}
+
+TUR:
+  - {name: Kennedy Burke,      wnba: CON, status: confirmed}
+
+CZE:
+  - {name: Eliska Joklava,     wnba: MIN, status: confirmed}
+
+HUN:
+  - {name: Dorka Juhasz,       wnba: MIN, status: confirmed}
+
+JPN:
+  - {name: Mai Yamamoto,       wnba: LVA, status: confirmed}
+
+KOR:
+  - {name: Jihyun Park,        wnba: LAS, status: confirmed}
+
+MLI:
+  - {name: Sika Kone,          wnba: ATL, status: unconfirmed}
