@@ -9,7 +9,7 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from .paths import ROSTERS_YAML, SCHEDULE_YAML, WNBA_TEAMS_YAML
-from .scrape import load_scraped
+from .scrape import broadcasters_for, load_scraped
 
 GAME_LENGTH = timedelta(hours=2)
 
@@ -65,13 +65,26 @@ class Game:
 
     @property
     def start_utc(self) -> datetime:
-        """Best available start time: the assigned slot, else the later option.
+        """Best available start time: the assigned slot, else the earliest option."""
+        return self.tip_utc or self.tip_options_utc[0]
 
-        Picking the later candidate is the safe default for a calendar: you would
-        rather have a placeholder that ends after the real game than one that has
-        already vanished from your day by the time it tips off.
+    @property
+    def end_utc(self) -> datetime:
+        """When the game can no longer be in progress.
+
+        For a game whose slot is still unassigned this spans the whole candidate
+        window -- earliest possible tip to latest possible final buzzer -- rather
+        than guessing one slot and blocking two hours around it.
+
+        Guessing cannot be made safe here: the candidate slots are 3 to 3.5 hours
+        apart and a game runs 2, so whichever single slot you pick, the block
+        misses the game entirely if the other one is the real one. A wide
+        placeholder is honest about the uncertainty and is replaced by the exact
+        time as soon as FIBA publishes the matchup.
         """
-        return self.tip_utc or self.tip_options_utc[-1]
+        if self.tip_utc is not None:
+            return self.tip_utc + GAME_LENGTH
+        return self.tip_options_utc[-1] + GAME_LENGTH
 
     @property
     def tentative(self) -> bool:
@@ -87,6 +100,10 @@ class Game:
 
     def nations(self) -> list[Nation]:
         return [n for n in (self.home, self.away) if n is not None]
+
+    def broadcasters_in(self, country: str) -> list[dict]:
+        """Carriers holding rights in one country, as `{name, url}`."""
+        return broadcasters_for(list(self.broadcasters), country)
 
 
 @dataclass
@@ -156,8 +173,23 @@ def load(include_unconfirmed: bool = True) -> Tournament:
         if tip is None and not options:
             raise ValueError(f"game {number} has neither tip_utc nor tip_utc_options")
 
-        home = nations[raw["home"]] if raw.get("home") else None
-        away = nations[raw["away"]] if raw.get("away") else None
+        extra = scraped.get(number) or {}
+
+        # A knockout matchup is a bracket slot until FIBA decides it. schedule.yaml
+        # holds the PDF-derived skeleton -- date, candidate slots, "2nd A - 3rd B"
+        # -- and the scrape fills in the teams and the real tip-off once they
+        # exist, so resolving a matchup needs no hand-edit. A hand-set value in
+        # schedule.yaml still wins, so it stays available as an override.
+        home_code = raw.get("home") or extra.get("home")
+        away_code = raw.get("away") or extra.get("away")
+        for code in (home_code, away_code):
+            if code and code not in nations:
+                raise ValueError(f"game {number}: unknown nation code {code!r}")
+        home = nations[home_code] if home_code else None
+        away = nations[away_code] if away_code else None
+
+        if tip is None and extra.get("tip_utc"):
+            tip = datetime.fromisoformat(extra["tip_utc"]).replace(tzinfo=UTC)
         if raw.get("group") and home and away:
             for n in (home, away):
                 if n.group != raw["group"]:
@@ -165,7 +197,6 @@ def load(include_unconfirmed: bool = True) -> Tournament:
                         f"game {number}: {n.code} is in group {n.group}, not {raw['group']}"
                     )
 
-        extra = scraped.get(number) or {}
         games.append(
             Game(
                 number=number,

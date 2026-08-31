@@ -12,6 +12,7 @@ from . import checks, data, render_html, render_ics, render_markdown
 from . import logos as logos_mod
 from . import scrape as scrape_mod
 from . import sources as sources_mod
+from . import tracker as tracker_mod
 from .paths import DOCS, SCHEDULE_YAML
 
 DEFAULT_TZ = "America/Los_Angeles"
@@ -28,7 +29,6 @@ def cmd_scrape(args) -> int:
     schedule = yaml.safe_load(SCHEDULE_YAML.read_text(encoding="utf-8"))
     result = scrape_mod.scrape(
         schedule,
-        viewer_country=args.viewer_country,
         only=args.game,
         refresh=args.refresh,
     )
@@ -36,7 +36,12 @@ def cmd_scrape(args) -> int:
 
     print(f"refreshed {len(result.entries)} games; {len(merged)} total on file")
     with_casters = sum(1 for e in merged.values() if e.get("broadcasters"))
-    print(f"{with_casters} games have {args.viewer_country} broadcast listings")
+    territories = {
+        c for e in merged.values() for b in e.get("broadcasters") or [] for c in b["countries"]
+    }
+    print(f"{with_casters} games have broadcast listings, covering {len(territories)} territories")
+    resolved = sorted(n for n, e in merged.items() if e.get("home") and e.get("away"))
+    print(f"{len(resolved)} matchups resolved on FIBA's listing")
     if result.pending:
         nums = ", ".join(str(n) for n in sorted(result.pending))
         print(f"{len(result.pending)} games still TBD (no page yet): {nums}")
@@ -53,6 +58,23 @@ def cmd_fetch_logos(args) -> int:
     print(f"downloaded {fetched} logo files")
     for m in misses:
         print(f"  missing: {m}", file=sys.stderr)
+    return 0
+
+
+def cmd_scrape_rosters(args) -> int:
+    entries, unknown = tracker_mod.scrape_squads(refresh=args.refresh)
+    if not entries:
+        print("parsed no squads at all -- the article structure has moved", file=sys.stderr)
+        return 1
+    merged = tracker_mod.merge_and_write(entries)
+
+    final = sorted(c for c, e in merged.items() if e["final_twelve"])
+    print(f"parsed {len(entries)} national squads; {len(merged)} on file")
+    print(f"{len(final)} have named a final twelve: {', '.join(final)}")
+    for name in unknown:
+        print(
+            f"  warning: tracker lists {name!r}, which is not a competing nation", file=sys.stderr
+        )
     return 0
 
 
@@ -120,13 +142,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
-    s = sub.add_parser("scrape", help="refresh official links and broadcast listings")
-    s.add_argument(
-        "--viewer-country",
-        default="US",
-        help="ISO country code of the VIEWER; broadcasters are filtered to "
-        "those holding rights there (default: US)",
-    )
+    s = sub.add_parser("scrape", help="refresh official links, matchups and broadcast listings")
     s.add_argument("--game", type=int, help="refresh only this game number")
     s.add_argument("--refresh", action="store_true", help="bypass the .cache/ of downloaded pages")
     s.set_defaults(func=cmd_scrape)
@@ -152,6 +168,10 @@ def main(argv: list[str] | None = None) -> int:
     fl = sub.add_parser("fetch-logos", help="download WNBA club logos into assets/logos/")
     fl.add_argument("--refresh", action="store_true", help="re-download logos already on disk")
     fl.set_defaults(func=cmd_fetch_logos)
+
+    sr = sub.add_parser("scrape-rosters", help="refresh national squads from FIBA's roster tracker")
+    sr.add_argument("--refresh", action="store_true", help="bypass the .cache/ copy of the page")
+    sr.set_defaults(func=cmd_scrape_rosters)
 
     fs = sub.add_parser(
         "fetch-sources", help="re-download the upstream PDF and article into sources/"

@@ -143,7 +143,6 @@ class ScrapeResult:
 def scrape(
     schedule: dict,
     *,
-    viewer_country: str = "US",
     only: int | None = None,
     refresh: bool = False,
 ) -> ScrapeResult:
@@ -180,6 +179,7 @@ def scrape(
                 "broadcasters": [],
                 "scraped_at": now,
             }
+            entry.update(_resolved_matchup(game))
 
             try:
                 page = fetch(client, url, refresh=refresh)
@@ -198,7 +198,7 @@ def scrape(
                     result.failures.append(f"game {number}: no broadcasters block on page")
                 entry.pop("broadcasters")  # let the merge keep whatever we had before
             else:
-                entry["broadcasters"] = _filter_broadcasters(casters, viewer_country)
+                entry["broadcasters"] = clean_broadcasters(casters)
 
             result.entries[number] = entry
 
@@ -210,6 +210,34 @@ def _is_unresolved(game: dict) -> bool:
     return not ((game.get("teamA") or {}).get("code") and (game.get("teamB") or {}).get("code"))
 
 
+def _resolved_matchup(game: dict) -> dict:
+    """Teams and tip-off, but only once FIBA has actually decided them.
+
+    A bracket slot sits in the listing from day one with empty team codes and a
+    22:00 UTC placeholder. Both facts flip together when the matchup is decided,
+    so non-empty team codes are the signal that everything on the row is real.
+
+    The time is still checked separately: 22:00 UTC is midnight in Berlin and no
+    game tips then, so that value is a sentinel whatever the teams say.
+    """
+    if _is_unresolved(game):
+        return {}
+
+    out = {
+        "home": (game.get("teamA") or {}).get("code"),
+        "away": (game.get("teamB") or {}).get("code"),
+    }
+    raw = game.get("gameDateTimeUTC")
+    if raw:
+        try:
+            tip = datetime.fromisoformat(raw).replace(tzinfo=UTC)
+        except ValueError:
+            return out
+        if tip.hour != TBD_SENTINEL_HOUR or tip.minute != 0:
+            out["tip_utc"] = tip.strftime("%Y-%m-%dT%H:%M")
+    return out
+
+
 def _matchup_label(game: dict) -> str | None:
     """FIBA's own wording for an unresolved game, e.g. '2nd of group A'."""
     a = (game.get("teamA") or {}).get("code") or game.get("teamAFrom")
@@ -217,29 +245,42 @@ def _matchup_label(game: dict) -> str | None:
     return f"{a} - {b}" if a and b else None
 
 
-def _filter_broadcasters(casters: list[dict], viewer_country: str) -> list[dict]:
-    """Keep only broadcasters holding rights in the viewer's country.
+def clean_broadcasters(casters: list[dict]) -> list[dict]:
+    """Every broadcaster with the territories it holds rights in.
 
-    Broadcast rights are per-territory: a game's raw listing names carriers for
-    100+ countries. `countries` is the rights list, so filtering on it answers
-    "how do I watch this from <country>" -- for every game, not just that
-    country's own team's games.
+    Rights are per-territory: one game names 14-29 carriers across 200+
+    countries. We keep the whole `countries` array rather than filtering to one
+    viewer here, so a single scrape serves every country and the published page
+    can let the reader pick their own. Filtering happens at render time.
     """
-    want = viewer_country.upper()
     out = []
     for b in casters:
-        countries = b.get("countries") or []
-        if want not in {str(c).upper() for c in countries}:
+        countries = sorted({str(c).upper() for c in (b.get("countries") or []) if c})
+        if not countries:
             continue
-        out.append({"name": b.get("name"), "url": clean_url(b.get("url"))})
+        out.append({"name": b.get("name"), "url": clean_url(b.get("url")), "countries": countries})
     # Stable order, de-duplicated by (name, url).
-    seen, deduped = set(), []
+    seen, deduped = {}, []
     for b in sorted(out, key=lambda b: (b["name"] or "").lower()):
         k = (b["name"], b["url"])
-        if k not in seen:
-            seen.add(k)
-            deduped.append(b)
+        if k in seen:
+            # Same carrier listed twice: union the territories rather than drop one.
+            merged = sorted(set(seen[k]["countries"]) | set(b["countries"]))
+            seen[k]["countries"] = merged
+            continue
+        seen[k] = b
+        deduped.append(b)
     return deduped
+
+
+def broadcasters_for(casters: list[dict], viewer_country: str) -> list[dict]:
+    """The subset holding rights in one country, as `{name, url}`."""
+    want = viewer_country.upper()
+    return [
+        {"name": b["name"], "url": b["url"]}
+        for b in casters
+        if want in set(b.get("countries") or [])
+    ]
 
 
 # --------------------------------------------------------------------------- #

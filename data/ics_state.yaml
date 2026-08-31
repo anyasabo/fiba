@@ -4,20 +4,20 @@
 # file resets every event to SEQUENCE 0, which can make already-subscribed
 # calendars ignore later updates.
 fiba-wwc-2026-game-10@fiba-wwc.invalid:
-  fingerprint: ae775ed263c036c3
-  sequence: 0
+  fingerprint: 0ee3b80bb6461f3d
+  sequence: 1
 fiba-wwc-2026-game-11@fiba-wwc.invalid:
   fingerprint: b288e7d7f181805d
   sequence: 0
 fiba-wwc-2026-game-12@fiba-wwc.invalid:
-  fingerprint: 21943f9ab9ee0392
-  sequence: 0
+  fingerprint: 3c4ced19c2f69463
+  sequence: 2
 fiba-wwc-2026-game-13@fiba-wwc.invalid:
-  fingerprint: 32d0789a701fe1e6
-  sequence: 0
+  fingerprint: 5dfabdb3d9917acd
+  sequence: 1
 fiba-wwc-2026-game-14@fiba-wwc.invalid:
-  fingerprint: 88cbaa744f009735
-  sequence: 0
+  fingerprint: ba62a3074e6c38b2
+  sequence: 2
 fiba-wwc-2026-game-15@fiba-wwc.invalid:
   fingerprint: 9e733ccd9b73f332
   sequence: 0
@@ -25,44 +25,44 @@ fiba-wwc-2026-game-16@fiba-wwc.invalid:
   fingerprint: f5af492f3260bea6
   sequence: 0
 fiba-wwc-2026-game-17@fiba-wwc.invalid:
-  fingerprint: b9c465608b784e38
-  sequence: 0
+  fingerprint: cfc1cf5e0a6273bf
+  sequence: 1
 fiba-wwc-2026-game-18@fiba-wwc.invalid:
-  fingerprint: 429c136756734bc6
-  sequence: 0
+  fingerprint: ed7ed60be2cb9ba5
+  sequence: 2
 fiba-wwc-2026-game-19@fiba-wwc.invalid:
-  fingerprint: ff9d4563ea70781a
-  sequence: 0
+  fingerprint: 59cb8a663050ba7f
+  sequence: 1
 fiba-wwc-2026-game-1@fiba-wwc.invalid:
-  fingerprint: 1cd56c604e5ffa8b
-  sequence: 0
+  fingerprint: 9d757cf1a9fbca9f
+  sequence: 1
 fiba-wwc-2026-game-20@fiba-wwc.invalid:
-  fingerprint: cb31900e9ccde158
-  sequence: 0
+  fingerprint: 649552bd9c6d95bb
+  sequence: 2
 fiba-wwc-2026-game-21@fiba-wwc.invalid:
   fingerprint: e2475945f9fb372c
   sequence: 0
 fiba-wwc-2026-game-22@fiba-wwc.invalid:
-  fingerprint: 319f1e8785ba74d0
-  sequence: 0
+  fingerprint: bd880d437140f596
+  sequence: 1
 fiba-wwc-2026-game-23@fiba-wwc.invalid:
-  fingerprint: 3623299d90c0387f
-  sequence: 0
+  fingerprint: c545c036083f8573
+  sequence: 2
 fiba-wwc-2026-game-24@fiba-wwc.invalid:
   fingerprint: f88ba4aab27e23b7
   sequence: 0
 fiba-wwc-2026-game-25@fiba-wwc.invalid:
-  fingerprint: 4c5f5a89913c536e
-  sequence: 0
+  fingerprint: 8bb1a6b6b03298bc
+  sequence: 1
 fiba-wwc-2026-game-26@fiba-wwc.invalid:
-  fingerprint: 83c8b0134673969e
-  sequence: 0
+  fingerprint: 2a99a1ec5f4dd7a8
+  sequence: 1
 fiba-wwc-2026-game-27@fiba-wwc.invalid:
-  fingerprint: 87961795ae689d3a
-  sequence: 0
+  fingerprint: b660aaf487b03b23
+  sequence: 1
 fiba-wwc-2026-game-28@fiba-wwc.invalid:
-  fingerprint: a9675c96abeecc93
-  sequence: 0
+  fingerprint: 1e6be6064961dcaa
+  sequence: 1
 fiba-wwc-2026-game-29@fiba-wwc.invalid:
   fingerprint: 1eb1175eb62f826f
   sequence: 0
@@ -79,11 +79,11 @@ fiba-wwc-2026-game-32@fiba-wwc.invalid:
   fingerprint: 65f840c94a12ce48
   sequence: 0
 fiba-wwc-2026-game-33@fiba-wwc.invalid:
-  fingerprint: 57c8ed46a7a2397b
-  sequence: 0
+  fingerprint: 99b7a9545e4b15bd
+  sequence: 1
 fiba-wwc-2026-game-34@fiba-wwc.invalid:
-  fingerprint: 624ae76f64e5500d
-  sequence: 0
+  fingerprint: df6e1b833adb1e4a
+  sequence: 1
 fiba-wwc-2026-game-35@fiba-wwc.invalid:
   fingerprint: 57acad508be50f71
   sequence: 0
@@ -91,14 +91,14 @@ fiba-wwc-2026-game-36@fiba-wwc.invalid:
   fingerprint: 5b39b95499e6733d
   sequence: 0
 fiba-wwc-2026-game-3@fiba-wwc.invalid:
-  fingerprint: 31fb4da2428e9e90
-  sequence: 0
+  fingerprint: b97b66ebff6a8f22
+  sequence: 2
 fiba-wwc-2026-game-4@fiba-wwc.invalid:
-  fingerprint: 80a05b92c9e760cb
-  sequence: 0
+  fingerprint: 0a162c029ebba1ee
+  sequence: 2
 fiba-wwc-2026-game-5@fiba-wwc.invalid:
-  fingerprint: 4f6db70b3149050c
-  sequence: 0
+  fingerprint: d6f68b7ad6b98b3a
+  sequence: 1
 fiba-wwc-2026-game-6@fiba-wwc.invalid:
   fingerprint: d05faa0da99af9f6
   sequence: 0
@@ -106,8 +106,8 @@ fiba-wwc-2026-game-7@fiba-wwc.invalid:
   fingerprint: 9494733c96605836
   sequence: 0
 fiba-wwc-2026-game-8@fiba-wwc.invalid:
-  fingerprint: c0e02d2d526d5aba
-  sequence: 0
+  fingerprint: bfd954f5b4f821dd
+  sequence: 2
 fiba-wwc-2026-game-9@fiba-wwc.invalid:
-  fingerprint: 435d298625cddc9a
-  sequence: 0
+  fingerprint: 0cb5a92f22dd13ed
+  sequence: 2

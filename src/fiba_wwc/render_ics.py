@@ -24,7 +24,7 @@ from datetime import UTC, datetime
 
 import yaml
 
-from .data import GAME_LENGTH, Game, Tournament
+from .data import Game, Tournament
 from .paths import DATA
 
 STATE = DATA / "ics_state.yaml"
@@ -84,9 +84,10 @@ def _phase(game: Game) -> str:
 def _description(game: Game, viewer_country: str) -> str:
     lines: list[str] = []
 
-    if game.broadcasters:
+    casters = game.broadcasters_in(viewer_country)
+    if casters:
         watch = ", ".join(
-            f"{b['name']} ({b['url']})" if b.get("url") else b["name"] for b in game.broadcasters
+            f"{b['name']} ({b['url']})" if b.get("url") else b["name"] for b in casters
         )
         lines.append(f"Watch ({viewer_country}): {watch}")
     else:
@@ -189,7 +190,7 @@ def render(
         state[uid] = {"sequence": sequence, "fingerprint": fingerprint}
 
         start = game.start_utc
-        end = start + GAME_LENGTH
+        end = game.end_utc
 
         lines += [
             "BEGIN:VEVENT",

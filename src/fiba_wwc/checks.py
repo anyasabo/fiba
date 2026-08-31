@@ -13,8 +13,9 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from .data import load
-from .paths import CACHE, SCHEDULE_YAML, SCRAPED_YAML
+from .paths import CACHE, ROSTERS_YAML, SCHEDULE_YAML, SCRAPED_YAML
 from .scrape import extract_games
+from .tracker import find_player, load_squads
 from .urls import clean_url
 
 
@@ -140,13 +141,78 @@ def check_rosters(report):
             ("Cecilia Zandalasini", "ITA"),
             ("Gabby Williams", "FRA"),
             ("Janelle Salaün", "FRA"),
-            ("Miela Sowha", "AUS"),
+            ("Miela Sowah", "AUS"),
         ]
     )
     _require(gsv == want, f"Golden State roster drifted from the source article: {gsv}")
     report(
         "rosters",
         f"{total} players; Golden State's 4 across AUS/FRA/ITA match the source article",
+    )
+
+
+def check_roster_names_against_fiba(report):
+    """Our player spellings, against FIBA's official roster tracker.
+
+    Reports rather than enforces, in both directions:
+
+    * a player FIBA's squad does not contain at all is a hard failure -- either
+      the name is wrong or they have been left out of a published squad
+    * a player matched only *inexactly* also fails, because every difference
+      that exists today has been reviewed and recorded. Some were our typo,
+      some are FIBA's (it strips diacritics unevenly and has its own slips),
+      and some are deliberate -- we keep the fuller given name, Chinese
+      surname-first order, and a player's current surname where FIBA still
+      lists the old one. Setting ``fiba_name`` on the player in rosters.yaml
+      records "reviewed, keeping ours" and settles it. So an unreviewed
+      difference means something moved since, and wants a human: either our
+      spelling is wrong or it is a divergence worth recording.
+
+    The matcher is deliberately tolerant -- it has to be, to survive FIBA's
+    uneven diacritics -- which is exactly why a merely-close match cannot pass
+    silently. "Kelsey Plumm" matches "Kelsey Plum" on the prefix rule; only
+    failing on the inexactness catches that typo.
+
+    This never touches ``status``. A federation can confirm an individual long
+    before it cuts to twelve, which is precisely what the tracker cannot say.
+    """
+    squads = load_squads()
+    if not squads:
+        report("names", "SKIPPED - no data/fiba_rosters.yaml, run `fiba-wwc scrape-rosters`")
+        return
+
+    rosters = yaml.safe_load(ROSTERS_YAML.read_text(encoding="utf-8")) or {}
+    missing, inexact, total = [], [], 0
+    for code, players in sorted(rosters.items()):
+        squad = squads.get(code, {}).get("players")
+        if not squad:
+            continue
+        for player in players:
+            total += 1
+            alias = player.get("fiba_name")
+            hit = find_player(player["name"], squad, alias=alias)
+            if hit is None:
+                missing.append(f"{code} {player['name']!r}")
+            elif hit != player["name"] and not alias:
+                # An alias is a recorded decision, so it is not news.
+                inexact.append(f"{code} {player['name']!r} vs FIBA {hit!r}")
+
+    _require(
+        not missing,
+        "not found in FIBA's published squad (wrong spelling, or left out): " + "; ".join(missing),
+    )
+    _require(
+        not inexact,
+        "spelling differs from FIBA and has not been reviewed -- correct ours, or "
+        "record the divergence with fiba_name: " + "; ".join(inexact),
+    )
+
+    named = sum(1 for e in squads.values() if e["final_twelve"])
+    aliased = sum(1 for ps in rosters.values() for p in ps if p.get("fiba_name"))
+    report(
+        "names",
+        f"{total} players match FIBA's squads across {len(squads)} nations "
+        f"({named} cut to a final twelve, {aliased} spellings deliberately ours)",
     )
 
 
@@ -157,6 +223,7 @@ CHECKS = [
     check_urls,
     check_scrape_mapping,
     check_times_against_fiba,
+    check_roster_names_against_fiba,
 ]
 
 

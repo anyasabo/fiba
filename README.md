@@ -1,4 +1,20 @@
-# FIBA Women's Basketball World Cup 2026
+# FIBA Women's Basketball World Cup 2026 Schedule
+
+As a mostly WNBA fan in the USA who wanted to watch the FIBA World Cup games, I wanted to be able to know
+
+* which WNBA players are on which teams?
+* which games are those players in?
+* what time are those games, and how can I watch them?
+
+and no one source had that information easily available. So a few tokens later this exists to glue that information together. The output is in the `docs/` dir, generated from the `data/` dir.
+
+The scripts can run against your own time zone or your own viewing country, and can be re-run as national teams get confirmed and as the tournament progresses so the teams are locked in.
+
+Multiple games have potential time slots today that are not fully locked in.
+
+This was entirely clanker generated. I would not recommend reading it with your own eyes. Go watch the Leite show instead.
+
+## clanker-generated below
 
 Berlin, 4–13 September 2026. Stores the schedule, the WNBA players on each
 national team, and the US broadcast listings once — then renders whatever view
@@ -7,6 +23,7 @@ is needed from that one set of data.
 ```sh
 uv run fiba-wwc generate          # docs/{schedule.md,index.html,fiba.ics}, Pacific time
 uv run fiba-wwc scrape            # refresh links + broadcasters from fiba.basketball
+uv run fiba-wwc scrape-rosters    # refresh national squads from FIBA's roster tracker
 uv run fiba-wwc fetch-logos       # download WNBA club logos (once)
 uv run fiba-wwc fetch-sources     # re-download the upstream PDF + article into sources/
 uv run fiba-wwc check             # validate the data files against each other
@@ -41,9 +58,40 @@ One file is **generated** and committed:
 | file | what it holds |
 |---|---|
 | `data/fiba_scraped.yaml` | Official game URLs, venues, and broadcast listings. |
+| `data/fiba_rosters.yaml` | The 16 national squads as FIBA's roster tracker publishes them. |
 
-Committing the scraped file means the site rebuilds offline, and `git diff`
-after a scrape shows exactly what FIBA changed.
+Committing the scraped files means the site rebuilds offline, and `git diff`
+after a scrape shows exactly what FIBA changed — which is the whole point of
+`scrape-rosters`: when a federation cuts its pool of 23 down to a final 12, the
+diff says so.
+
+### What the roster tracker can and cannot settle
+
+It is the official source for *which names a federation has published*, and it
+carries FIBA's own disclaimer that these "do not necessarily correspond to the
+rosters that will play". So it does **not** decide `status`. A federation can
+confirm an individual player long before it names a final twelve — eight of the
+sixteen still list a pool — and the tracker cannot express that. `final_twelve`
+in the generated file means only "this list is 12 names long".
+
+It carries no club affiliation either, so it can never say who is in the WNBA.
+That mapping is exactly what `rosters.yaml` exists for, and stays hand-edited.
+
+What it *is* authoritative for is spelling, sometimes. `fiba-wwc check` matches
+every player against it and fails on any difference that has not been reviewed.
+
+Four of our names had the wrong *letters* and were corrected against it:
+`Sowha`→`Sowah`, `Joklava`→`Joklová`, `Florenz`→`Flórez`, `Valariane`→`Valériane`.
+But fifteen names now differ from FIBA's spelling deliberately, each recorded as
+`fiba_name:`. Most are diacritics FIBA strips — and it strips them unevenly,
+keeping the ü in "Bühner" while dropping the ö from "Geiselsoder" in the same
+list, so its stripped forms are not evidence a name is unaccented. The rest:
+it abbreviates given names
+(Steph/Stephanie), writes Chinese names given-name-first where we and the WNBA
+use surname-first (Han Xu, Li Yueru), uses a typographic apostrophe in A'ja
+Wilson, and still lists Megan DiLeo under her former surname.
+
+So the rule is: take FIBA's letters, keep our diacritics.
 
 ### Where the hand-edited data came from
 
@@ -56,36 +104,49 @@ re-checking.
 
 ## Updating during the tournament
 
-**A knockout matchup is decided.** Edit that game in `data/schedule.yaml`: set
-`home` and `away`, and replace `tip_utc_options: [...]` with a single `tip_utc`.
-Then re-run `scrape` and `generate`.
+**A knockout matchup is decided.** Nothing to edit — `uv run fiba-wwc scrape &&
+uv run fiba-wwc generate`. A bracket slot sits in FIBA's listing from day one
+with empty team codes and a 22:00 UTC placeholder; both flip together when the
+matchup is decided, so non-empty team codes are the signal that the row is real.
+The scrape picks up the teams and the actual tip-off, and `schedule.yaml` keeps
+only the PDF-derived skeleton (date, candidate slots, "2nd A - 3rd B").
 
-```yaml
-- {number: 25, phase: qualification, label: "2nd A - 3rd B",
-   date_utc: 2026-09-08, tip_utc: "18:45", home: FRA, away: JPN}
-```
+A value hand-set in `schedule.yaml` still wins, so it remains available as an
+override if FIBA is wrong.
 
-**A national roster is finalised.** Flip a player's `status` to `confirmed` in
-`data/rosters.yaml`, or add a line. `--confirmed-only` hides everything still
-speculative.
+**A national roster is finalised.** Run `uv run fiba-wwc scrape-rosters` and read
+the diff — a nation dropping to 12 names is a squad that has been cut. Then flip
+that player's `status` to `confirmed` in `data/rosters.yaml`, or add a line.
+`--confirmed-only` hides everything still speculative. The status stays a human
+judgement; see above for why the tracker cannot make it.
 
-**Broadcast listings appear.** Just `uv run fiba-wwc scrape`. FIBA only publishes
+**Broadcast listings appear.** Same `uv run fiba-wwc scrape`. FIBA only publishes
 a game page once the matchup exists, so the 12 knockout games report as "still
 TBD" until then — that is expected, not an error.
 
 ## Broadcast listings are per-country
 
-Rights differ by territory: a single game page lists ~17 broadcasters covering
-100+ countries. The scraper filters on the broadcaster's rights list, so the
-question it answers is *"how do I watch this from the US"* — for **all 36 games**,
-not just Team USA's.
+Rights differ by territory: a single game lists 14–29 broadcasters, and across
+the tournament they cover 212 territories. The scrape stores every carrier with
+the territories it holds rights in, so one scrape serves every country and the
+filtering happens at render time.
 
 ```sh
-uv run fiba-wwc scrape --viewer-country FR
+uv run fiba-wwc generate --viewer-country FR    # build the page for France
 ```
 
-For Hungary–France, that difference is real: US viewers get Courtside 1891 and
-TNT; French viewers get Courtside 1891, beIN Sports 1 and TFX.
+**The published page does not need rebuilding for this.** `docs/index.html`
+carries the whole broadcaster table (~60KB of JSON, a few KB after compression)
+and offers two dropdowns — time zone and viewing country — so a reader in New
+York can switch to Eastern and a reader in Canada can see Canadian carriers,
+without a rebuild. The page is server-rendered as Pacific/US and the script only
+mutates it when a dropdown changes, so it still works with JavaScript off, still
+prints correctly, and the choice is remembered in `localStorage`.
+
+For Hungary–France that difference is real: US viewers get Courtside 1891 and
+TNT; French viewers get TFX among others. The `.ics` feed is still built for one
+country — times in it are UTC-anchored so they are correct everywhere, but the
+broadcaster line in each event description is not.
 
 Tracking and referral params (`utm_*`, `fbclid`, `ref`, …) are stripped from
 every URL before it is stored or rendered.

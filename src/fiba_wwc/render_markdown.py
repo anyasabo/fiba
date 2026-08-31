@@ -47,10 +47,11 @@ def _nation_lines(n: Nation, depth: int) -> list[str]:
 
 
 def _watch_line(game: Game, viewer_country: str) -> str:
-    if not game.broadcasters:
+    casters = game.broadcasters_in(viewer_country)
+    if not casters:
         return f"  - 📺 Watch ({viewer_country}): _not yet listed_"
     parts = []
-    for b in game.broadcasters:
+    for b in casters:
         name = b.get("name") or "?"
         url = b.get("url")
         parts.append(f"[{name}]({url})" if url else name)
