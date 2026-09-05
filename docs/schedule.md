@@ -12,7 +12,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🇯🇵 **Japan** — WNBA players:
     - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — Mai Yamamoto
   - 🇲🇱 **Mali** — WNBA players:
-    - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Sika Koné _(unconfirmed)_
+    - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Sika Koné
 
 - **2:30 am** — [Australia vs Puerto Rico](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128129-AUS-PUR)  ·  Group C · Game 5
   - 🏟 Berlin: Fri 4 Sep, 11:30 · Max-Schmeling-Halle
@@ -32,19 +32,22 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
     - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Angel Reese, Rhyne Howard
     - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Paige Bueckers
     - **IND** ![IND](../assets/logos/IND.svg) Indiana Fever — Aliyah Boston, Caitlin Clark
-    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — A'ja Wilson, Chelsea Gray, Jackie Young
+    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — Chelsea Gray, Jackie Young
     - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Napheesa Collier
     - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Breanna Stewart
-    - **PHX** ![PHX](../assets/logos/PHX.svg) Phoenix Mercury — Kahleah Copper, Kelsey Plum
+    - **PHX** ![PHX](../assets/logos/PHX.svg) Phoenix Mercury — Kahleah Copper
+    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Kiki Iriafen, Sonia Citron
   - 🇨🇳 **China** — WNBA players:
-    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Li Yueru _(unconfirmed)_
-    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Han Xu _(unconfirmed)_
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Han Xu
 
 - **5:30 am** — [Korea vs Nigeria](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128123-KOR-NGR)  ·  Group B · Game 2
   - 🏟 Berlin: Fri 4 Sep, 14:30 · Berlin Arena
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [HBOMax](https://play.hbomax.com/)
   - 🇰🇷 **Korea** — WNBA players:
     - **LAS** ![LAS](../assets/logos/LAS.svg) Los Angeles Sparks — Jihyun Park
+  - 🇳🇬 **Nigeria** — WNBA players:
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Elizabeth Balogun
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Amy Okonkwo
 
 - **8:30 am** — [Belgium vs Türkiye](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128128-BEL-TUR)  ·  Group C · Game 7
   - 🏟 Berlin: Fri 4 Sep, 17:30 · Max-Schmeling-Halle
@@ -60,13 +63,14 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🏟 Berlin: Fri 4 Sep, 17:45 · Berlin Arena
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [TNT](https://www.tntsports.com/)
   - 🇪🇸 **Spain** — WNBA players:
-    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Raquel Carrera _(unconfirmed)_
-    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Megan DiLeo _(unconfirmed)_
+    - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Elena Buenavida
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Raquel Carrera
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Megan DiLeo
     - **SEA** ![SEA](../assets/logos/SEA.svg) Seattle Storm — Awa Fam
     - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — María Conde
-    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Alicia Flórez _(unconfirmed)_
+    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Alicia Flórez
   - 🇩🇪 **Germany** — WNBA players:
-    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Leonie Fiebich _(unconfirmed)_
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Leonie Fiebich
     - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Frieda Bühner, Luisa Geiselsöder
     - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — Nyara Sabally
 
@@ -76,7 +80,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🇨🇿 **Czechia** — WNBA players:
     - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Eliška Joklová
   - 🇮🇹 **Italy** — WNBA players:
-    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Costanza Verona _(unconfirmed)_
+    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Costanza Verona
     - **GSV** ![GSV](../assets/logos/GSV.svg) Golden State Valkyries — Cecilia Zandalasini
 
 - **12 pm** — [Hungary vs France](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128122-HUN-FRA)  ·  Group B · Game 4
@@ -99,17 +103,21 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🏟 Berlin: Sat 5 Sep, 11:30 · Max-Schmeling-Halle
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [HBOMax](https://play.hbomax.com/)
   - 🇲🇱 **Mali** — WNBA players:
-    - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Sika Koné _(unconfirmed)_
+    - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Sika Koné
   - 🇪🇸 **Spain** — WNBA players:
-    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Raquel Carrera _(unconfirmed)_
-    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Megan DiLeo _(unconfirmed)_
+    - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Elena Buenavida
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Raquel Carrera
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Megan DiLeo
     - **SEA** ![SEA](../assets/logos/SEA.svg) Seattle Storm — Awa Fam
     - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — María Conde
-    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Alicia Flórez _(unconfirmed)_
+    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Alicia Flórez
 
 - **5:15 am** — [Nigeria vs Hungary](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128124-NGR-HUN)  ·  Group B · Game 10
   - 🏟 Berlin: Sat 5 Sep, 14:15 · Max-Schmeling-Halle
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [HBOMax](https://play.hbomax.com/)
+  - 🇳🇬 **Nigeria** — WNBA players:
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Elizabeth Balogun
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Amy Okonkwo
   - 🇭🇺 **Hungary** — WNBA players:
     - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Dorka Juhász
 
@@ -117,7 +125,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🏟 Berlin: Sat 5 Sep, 18:00 · Max-Schmeling-Halle
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [HBOMax](https://play.hbomax.com/)
   - 🇩🇪 **Germany** — WNBA players:
-    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Leonie Fiebich _(unconfirmed)_
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Leonie Fiebich
     - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Frieda Bühner, Luisa Geiselsöder
     - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — Nyara Sabally
   - 🇯🇵 **Japan** — WNBA players:
@@ -156,8 +164,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🏟 Berlin: Sun 6 Sep, 14:30 · Berlin Arena
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [HBOMax](https://play.hbomax.com/)
   - 🇨🇳 **China** — WNBA players:
-    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Li Yueru _(unconfirmed)_
-    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Han Xu _(unconfirmed)_
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Han Xu
   - 🇨🇿 **Czechia** — WNBA players:
     - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Eliška Joklová
 
@@ -173,16 +180,17 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🏟 Berlin: Sun 6 Sep, 20:45 · Berlin Arena
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [TNT](https://www.tntsports.com/)
   - 🇮🇹 **Italy** — WNBA players:
-    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Costanza Verona _(unconfirmed)_
+    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Costanza Verona
     - **GSV** ![GSV](../assets/logos/GSV.svg) Golden State Valkyries — Cecilia Zandalasini
   - 🇺🇸 **USA** — WNBA players:
     - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Angel Reese, Rhyne Howard
     - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Paige Bueckers
     - **IND** ![IND](../assets/logos/IND.svg) Indiana Fever — Aliyah Boston, Caitlin Clark
-    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — A'ja Wilson, Chelsea Gray, Jackie Young
+    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — Chelsea Gray, Jackie Young
     - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Napheesa Collier
     - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Breanna Stewart
-    - **PHX** ![PHX](../assets/logos/PHX.svg) Phoenix Mercury — Kahleah Copper, Kelsey Plum
+    - **PHX** ![PHX](../assets/logos/PHX.svg) Phoenix Mercury — Kahleah Copper
+    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Kiki Iriafen, Sonia Citron
 
 
 ## Monday, September 7, 2026
@@ -211,6 +219,9 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 - **5:30 am** — [Nigeria vs France](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128127-NGR-FRA)  ·  Group B · Game 18
   - 🏟 Berlin: Mon 7 Sep, 14:30 · Berlin Arena
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [TNT](https://www.tntsports.com/)
+  - 🇳🇬 **Nigeria** — WNBA players:
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Elizabeth Balogun
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Amy Okonkwo
   - 🇫🇷 **France** — WNBA players:
     - **CON** ![CON](../assets/logos/CON.svg) Connecticut Sun — Leïla Lacan
     - **GSV** ![GSV](../assets/logos/GSV.svg) Golden State Valkyries — Gabby Williams, Janelle Salaün
@@ -231,11 +242,11 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🏟 Berlin: Mon 7 Sep, 17:50 · Berlin Arena
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [HBOMax](https://play.hbomax.com/)
   - 🇩🇪 **Germany** — WNBA players:
-    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Leonie Fiebich _(unconfirmed)_
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Leonie Fiebich
     - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Frieda Bühner, Luisa Geiselsöder
     - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — Nyara Sabally
   - 🇲🇱 **Mali** — WNBA players:
-    - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Sika Koné _(unconfirmed)_
+    - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Sika Koné
 
 - **8:50 am** — [Japan vs Spain](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128120-JPN-ESP)  ·  Group A · Game 23
   - 🏟 Berlin: Mon 7 Sep, 17:50 · Max-Schmeling-Halle
@@ -243,11 +254,12 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🇯🇵 **Japan** — WNBA players:
     - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — Mai Yamamoto
   - 🇪🇸 **Spain** — WNBA players:
-    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Raquel Carrera _(unconfirmed)_
-    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Megan DiLeo _(unconfirmed)_
+    - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Elena Buenavida
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Raquel Carrera
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Megan DiLeo
     - **SEA** ![SEA](../assets/logos/SEA.svg) Seattle Storm — Awa Fam
     - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — María Conde
-    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Alicia Flórez _(unconfirmed)_
+    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Alicia Flórez
 
 - **11:45 am** — [USA vs Czechia](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128138-USA-CZE)  ·  Group D · Game 20
   - 🏟 Berlin: Mon 7 Sep, 20:45 · Berlin Arena
@@ -256,10 +268,11 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
     - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Angel Reese, Rhyne Howard
     - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Paige Bueckers
     - **IND** ![IND](../assets/logos/IND.svg) Indiana Fever — Aliyah Boston, Caitlin Clark
-    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — A'ja Wilson, Chelsea Gray, Jackie Young
+    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — Chelsea Gray, Jackie Young
     - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Napheesa Collier
     - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Breanna Stewart
-    - **PHX** ![PHX](../assets/logos/PHX.svg) Phoenix Mercury — Kahleah Copper, Kelsey Plum
+    - **PHX** ![PHX](../assets/logos/PHX.svg) Phoenix Mercury — Kahleah Copper
+    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Kiki Iriafen, Sonia Citron
   - 🇨🇿 **Czechia** — WNBA players:
     - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Eliška Joklová
 
@@ -267,11 +280,10 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🏟 Berlin: Mon 7 Sep, 20:45 · Max-Schmeling-Halle
   - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [HBOMax](https://play.hbomax.com/)
   - 🇮🇹 **Italy** — WNBA players:
-    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Costanza Verona _(unconfirmed)_
+    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Costanza Verona
     - **GSV** ![GSV](../assets/logos/GSV.svg) Golden State Valkyries — Cecilia Zandalasini
   - 🇨🇳 **China** — WNBA players:
-    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Li Yueru _(unconfirmed)_
-    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Han Xu _(unconfirmed)_
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Han Xu
 
 
 ## Tuesday, September 8, 2026
@@ -342,7 +354,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 ### ![ATL](../assets/logos/ATL.svg) Atlanta Dream (ATL)
 
 - 🇦🇺 Australia — Isobel Borlase
-- 🇲🇱 Mali — Sika Koné _(unconfirmed)_
+- 🇲🇱 Mali — Sika Koné
 - 🇺🇸 USA — Angel Reese
 - 🇺🇸 USA — Rhyne Howard
 
@@ -354,8 +366,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 ### ![DAL](../assets/logos/DAL.svg) Dallas Wings (DAL)
 
 - 🇦🇺 Australia — Alanna Smith
-- 🇨🇳 China — Li Yueru _(unconfirmed)_
-- 🇮🇹 Italy — Costanza Verona _(unconfirmed)_
+- 🇮🇹 Italy — Costanza Verona
 - 🇺🇸 USA — Paige Bueckers
 
 ### ![GSV](../assets/logos/GSV.svg) Golden State Valkyries (GSV)
@@ -378,7 +389,6 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 - 🇦🇺 Australia — Stephanie Talbot
 - 🇯🇵 Japan — Mai Yamamoto
-- 🇺🇸 USA — A'ja Wilson
 - 🇺🇸 USA — Chelsea Gray
 - 🇺🇸 USA — Jackie Young
 
@@ -388,15 +398,17 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 - 🇧🇪 Belgium — Antonia Delaere
 - 🇨🇿 Czechia — Eliška Joklová
 - 🇭🇺 Hungary — Dorka Juhász
+- 🇪🇸 Spain — Elena Buenavida
 - 🇺🇸 USA — Napheesa Collier
 
 ### ![NYL](../assets/logos/NYL.svg) New York Liberty (NYL)
 
-- 🇨🇳 China — Han Xu _(unconfirmed)_
+- 🇨🇳 China — Han Xu
 - 🇫🇷 France — Marine Johannès
 - 🇫🇷 France — Pauline Astier
-- 🇩🇪 Germany — Leonie Fiebich _(unconfirmed)_
-- 🇪🇸 Spain — Raquel Carrera _(unconfirmed)_
+- 🇩🇪 Germany — Leonie Fiebich
+- 🇳🇬 Nigeria — Elizabeth Balogun
+- 🇪🇸 Spain — Raquel Carrera
 - 🇺🇸 USA — Breanna Stewart
 
 ### ![PHX](../assets/logos/PHX.svg) Phoenix Mercury (PHX)
@@ -404,14 +416,14 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 - 🇧🇪 Belgium — Kyara Linskens
 - 🇫🇷 France — Valériane Ayayi
 - 🇺🇸 USA — Kahleah Copper
-- 🇺🇸 USA — Kelsey Plum
 
 ### ![POR](../assets/logos/POR.svg) Portland Fire (POR)
 
 - 🇫🇷 France — Carla Leite
 - 🇩🇪 Germany — Frieda Bühner
 - 🇩🇪 Germany — Luisa Geiselsöder
-- 🇪🇸 Spain — Megan DiLeo _(unconfirmed)_
+- 🇳🇬 Nigeria — Amy Okonkwo
+- 🇪🇸 Spain — Megan DiLeo
 
 ### ![SEA](../assets/logos/SEA.svg) Seattle Storm (SEA)
 
@@ -428,6 +440,8 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 ### ![WAS](../assets/logos/WAS.svg) Washington Mystics (WAS)
 
-- 🇪🇸 Spain — Alicia Flórez _(unconfirmed)_
+- 🇪🇸 Spain — Alicia Flórez
+- 🇺🇸 USA — Kiki Iriafen
+- 🇺🇸 USA — Sonia Citron
 
 _No players in the tournament:_ Chicago Sky

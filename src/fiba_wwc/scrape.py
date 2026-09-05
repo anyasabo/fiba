@@ -149,7 +149,6 @@ def scrape(
     event_slug = schedule["tournament"]["fiba_event_slug"]
     schedule_games = schedule["games"]
     result = ScrapeResult()
-    now = datetime.now(UTC).replace(microsecond=0).isoformat()
 
     headers = {"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"}
     with httpx.Client(headers=headers, timeout=30, follow_redirects=True) as client:
@@ -177,7 +176,6 @@ def scrape(
                 "venue": game.get("venueName"),
                 "matchup_label": _matchup_label(game),
                 "broadcasters": [],
-                "scraped_at": now,
             }
             entry.update(_resolved_matchup(game))
 
@@ -261,7 +259,7 @@ def clean_broadcasters(casters: list[dict]) -> list[dict]:
         out.append({"name": b.get("name"), "url": clean_url(b.get("url")), "countries": countries})
     # Stable order, de-duplicated by (name, url).
     seen, deduped = {}, []
-    for b in sorted(out, key=lambda b: (b["name"] or "").lower()):
+    for b in sorted(out, key=lambda b: ((b["name"] or "").lower(), b["url"] or "")):
         k = (b["name"], b["url"])
         if k in seen:
             # Same carrier listed twice: union the territories rather than drop one.
@@ -299,6 +297,10 @@ def merge_and_write(result: ScrapeResult) -> dict[int, dict]:
     merged = load_scraped()
     for number, entry in result.entries.items():
         current = dict(merged.get(number) or {})
+        # The file used to carry a per-game `scraped_at`. It moved on every run
+        # whether or not FIBA had changed anything, which buried the real diff.
+        # The merge never drops keys, so retire it explicitly.
+        current.pop("scraped_at", None)
         current.update(entry)
         merged[number] = current
 

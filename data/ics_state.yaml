@@ -1,113 +1,151 @@
-# GENERATED -- tracks iCalendar SEQUENCE numbers across runs.
+# GENERATED -- tracks iCalendar SEQUENCE numbers and DTSTAMPs across runs.
 # SEQUENCE must increase when an event changes and stay put when it does
-# not, so subscribers see real updates and no spurious ones. Deleting this
-# file resets every event to SEQUENCE 0, which can make already-subscribed
-# calendars ignore later updates.
+# not, so subscribers see real updates and no spurious ones. updated_at is
+# the DTSTAMP written into the feed, held here for the same reason: derived
+# from the fingerprint rather than the clock, a rebuild that changes nothing
+# rewrites nothing. Deleting this file resets every event to SEQUENCE 0,
+# which can make already-subscribed calendars ignore later updates.
 fiba-wwc-2026-game-10@fiba-wwc.invalid:
-  fingerprint: 0ee3b80bb6461f3d
-  sequence: 1
+  fingerprint: 649fe8dcfc9a45bb
+  sequence: 2
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-11@fiba-wwc.invalid:
-  fingerprint: b288e7d7f181805d
-  sequence: 0
+  fingerprint: 0472fa9f9f971e5d
+  sequence: 1
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-12@fiba-wwc.invalid:
   fingerprint: 3c4ced19c2f69463
   sequence: 2
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-13@fiba-wwc.invalid:
   fingerprint: 5dfabdb3d9917acd
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-14@fiba-wwc.invalid:
-  fingerprint: ba62a3074e6c38b2
-  sequence: 2
+  fingerprint: 58a728ff5a0ddae5
+  sequence: 3
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-15@fiba-wwc.invalid:
   fingerprint: 9e733ccd9b73f332
   sequence: 0
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-16@fiba-wwc.invalid:
-  fingerprint: f5af492f3260bea6
-  sequence: 0
+  fingerprint: 59d6cd5ec4125b16
+  sequence: 1
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-17@fiba-wwc.invalid:
   fingerprint: cfc1cf5e0a6273bf
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-18@fiba-wwc.invalid:
-  fingerprint: ed7ed60be2cb9ba5
-  sequence: 2
+  fingerprint: 2b8a687dc06b3bef
+  sequence: 3
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-19@fiba-wwc.invalid:
-  fingerprint: 59cb8a663050ba7f
-  sequence: 1
-fiba-wwc-2026-game-1@fiba-wwc.invalid:
-  fingerprint: 9d757cf1a9fbca9f
-  sequence: 1
-fiba-wwc-2026-game-20@fiba-wwc.invalid:
-  fingerprint: 649552bd9c6d95bb
+  fingerprint: a57b238a278c6214
   sequence: 2
+  updated_at: '2026-09-05T03:56:54+00:00'
+fiba-wwc-2026-game-1@fiba-wwc.invalid:
+  fingerprint: de8ea350019c8a78
+  sequence: 2
+  updated_at: '2026-09-05T03:56:54+00:00'
+fiba-wwc-2026-game-20@fiba-wwc.invalid:
+  fingerprint: 9f80f35b8aded784
+  sequence: 3
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-21@fiba-wwc.invalid:
   fingerprint: e2475945f9fb372c
   sequence: 0
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-22@fiba-wwc.invalid:
   fingerprint: bd880d437140f596
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-23@fiba-wwc.invalid:
-  fingerprint: c545c036083f8573
-  sequence: 2
+  fingerprint: 3113c1a9f681d88b
+  sequence: 3
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-24@fiba-wwc.invalid:
-  fingerprint: f88ba4aab27e23b7
-  sequence: 0
+  fingerprint: 302e20c2c701113b
+  sequence: 1
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-25@fiba-wwc.invalid:
   fingerprint: 8bb1a6b6b03298bc
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-26@fiba-wwc.invalid:
   fingerprint: 2a99a1ec5f4dd7a8
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-27@fiba-wwc.invalid:
   fingerprint: b660aaf487b03b23
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-28@fiba-wwc.invalid:
   fingerprint: 1e6be6064961dcaa
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-29@fiba-wwc.invalid:
   fingerprint: 1eb1175eb62f826f
   sequence: 0
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-2@fiba-wwc.invalid:
-  fingerprint: 4c210c90c515bb3e
-  sequence: 0
+  fingerprint: e1fabfc4e3ecb469
+  sequence: 1
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-30@fiba-wwc.invalid:
   fingerprint: 080a6a34086676aa
   sequence: 0
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-31@fiba-wwc.invalid:
   fingerprint: 16c5c9183dc34134
   sequence: 0
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-32@fiba-wwc.invalid:
   fingerprint: 65f840c94a12ce48
   sequence: 0
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-33@fiba-wwc.invalid:
   fingerprint: 99b7a9545e4b15bd
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-34@fiba-wwc.invalid:
   fingerprint: df6e1b833adb1e4a
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-35@fiba-wwc.invalid:
   fingerprint: 57acad508be50f71
   sequence: 0
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-36@fiba-wwc.invalid:
   fingerprint: 5b39b95499e6733d
   sequence: 0
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-3@fiba-wwc.invalid:
-  fingerprint: b97b66ebff6a8f22
-  sequence: 2
+  fingerprint: 2bb23ac26c5b9c12
+  sequence: 3
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-4@fiba-wwc.invalid:
   fingerprint: 0a162c029ebba1ee
   sequence: 2
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-5@fiba-wwc.invalid:
   fingerprint: d6f68b7ad6b98b3a
   sequence: 1
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-6@fiba-wwc.invalid:
-  fingerprint: d05faa0da99af9f6
-  sequence: 0
+  fingerprint: da90a2f22ef85efd
+  sequence: 1
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-7@fiba-wwc.invalid:
   fingerprint: 9494733c96605836
   sequence: 0
+  updated_at: '2026-09-05T03:19:34+00:00'
 fiba-wwc-2026-game-8@fiba-wwc.invalid:
-  fingerprint: bfd954f5b4f821dd
-  sequence: 2
+  fingerprint: 8af5a7fe73437345
+  sequence: 3
+  updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-9@fiba-wwc.invalid:
-  fingerprint: 0cb5a92f22dd13ed
-  sequence: 2
+  fingerprint: d1921553954f7a7b
+  sequence: 3
+  updated_at: '2026-09-05T03:56:54+00:00'

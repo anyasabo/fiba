@@ -216,6 +216,66 @@ def check_roster_names_against_fiba(report):
     )
 
 
+def check_rosters_against_final_twelves(report):
+    """Our WNBA players against the twelve each federation actually published.
+
+    The name check below asks only whether FIBA's squad *contains* a player. It
+    cannot see the two failures that matter once squads lock:
+
+    * someone in rosters.yaml who did not make the twelve -- they are being
+      rendered onto a schedule for games they will not play
+    * a squad member at a WNBA club who is missing from rosters.yaml -- a WNBA
+      player the site silently omits
+
+    Both are live risks for the whole tournament, not just at cut time: an
+    injury replacement rewrites a twelve mid-event, and this is what notices.
+
+    ``wnba`` is a floor. FIBA lists a developmental player at her European club
+    -- Elizabeth Balogun reads as Valencia, not New York -- so a missing one of
+    those is invisible here and only WNBA.com's list will show it. That makes
+    an omission possible; it does not make one silent, because the player would
+    still have to be absent from rosters.yaml to matter.
+    """
+    squads = load_squads()
+    if not squads:
+        report("twelves", "SKIPPED - no data/fiba_rosters.yaml, run `fiba-wwc scrape-rosters`")
+        return
+
+    rosters = yaml.safe_load(ROSTERS_YAML.read_text(encoding="utf-8")) or {}
+    dropped, absent, locked = [], [], 0
+    for code, squad in sorted(squads.items()):
+        # A nation still on a preselect pool has not decided anything yet.
+        if not squad.get("final_twelve"):
+            continue
+        locked += 1
+        names = squad["players"]
+        ours = rosters.get(code) or []
+        for player in ours:
+            if find_player(player["name"], names, alias=player.get("fiba_name")) is None:
+                dropped.append(f"{code} {player['name']!r}")
+        for name, club in sorted((squad.get("wnba") or {}).items()):
+            if not any(
+                find_player(p["name"], [name], alias=p.get("fiba_name")) for p in ours
+            ):
+                absent.append(f"{code} {name!r} ({club})")
+
+    _require(
+        not dropped,
+        "in rosters.yaml but not on the twelve their federation published -- cut, "
+        "replaced, or injured: " + "; ".join(dropped),
+    )
+    _require(
+        not absent,
+        "on a published twelve at a WNBA club but missing from rosters.yaml: "
+        + "; ".join(absent),
+    )
+    total = sum(len(rosters.get(c) or []) for c in squads if squads[c].get("final_twelve"))
+    report(
+        "twelves",
+        f"{total} players all on the twelves FIBA published, across {locked} locked squads",
+    )
+
+
 CHECKS = [
     check_structure,
     check_rosters,
@@ -224,6 +284,7 @@ CHECKS = [
     check_scrape_mapping,
     check_times_against_fiba,
     check_roster_names_against_fiba,
+    check_rosters_against_final_twelves,
 ]
 
 

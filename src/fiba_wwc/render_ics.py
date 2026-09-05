@@ -14,7 +14,10 @@ in someone's calendar. Two properties make that work:
             must not bump it, or clients re-notify for no reason.
 
 SEQUENCE is persisted in data/ics_state.yaml because it has to survive across
-runs -- recomputing it from scratch would reset every event to 0.
+runs -- recomputing it from scratch would reset every event to 0. DTSTAMP rides
+the same mechanism: it records when this version of the event was built, so it
+moves on exactly the runs SEQUENCE moves and a no-op rebuild leaves the feed
+byte-identical.
 """
 
 from __future__ import annotations
@@ -138,11 +141,13 @@ def _load_state() -> dict:
 
 def _save_state(state: dict) -> None:
     STATE.write_text(
-        "# GENERATED -- tracks iCalendar SEQUENCE numbers across runs.\n"
+        "# GENERATED -- tracks iCalendar SEQUENCE numbers and DTSTAMPs across runs.\n"
         "# SEQUENCE must increase when an event changes and stay put when it does\n"
-        "# not, so subscribers see real updates and no spurious ones. Deleting this\n"
-        "# file resets every event to SEQUENCE 0, which can make already-subscribed\n"
-        "# calendars ignore later updates.\n"
+        "# not, so subscribers see real updates and no spurious ones. updated_at is\n"
+        "# the DTSTAMP written into the feed, held here for the same reason: derived\n"
+        "# from the fingerprint rather than the clock, a rebuild that changes nothing\n"
+        "# rewrites nothing. Deleting this file resets every event to SEQUENCE 0,\n"
+        "# which can make already-subscribed calendars ignore later updates.\n"
         + yaml.safe_dump(state, sort_keys=True, allow_unicode=True),
         encoding="utf-8",
     )
@@ -155,7 +160,7 @@ def render(
     feed_url: str | None = None,
 ) -> str:
     state = _load_state()
-    now = datetime.now(UTC)
+    now_iso = datetime.now(UTC).replace(microsecond=0).isoformat()
     caldesc = (
         f"All {len(tournament.games)} games, with WNBA players "
         f"and {viewer_country} broadcast listings."
@@ -185,9 +190,17 @@ def render(
 
         prior = state.get(uid) or {}
         sequence = int(prior.get("sequence", 0))
-        if prior and prior.get("fingerprint") != fingerprint:
+        changed = bool(prior) and prior.get("fingerprint") != fingerprint
+        if changed:
             sequence += 1
-        state[uid] = {"sequence": sequence, "fingerprint": fingerprint}
+        # A state record written before updated_at existed has no stamp to carry
+        # forward, so it takes one now -- a one-off, not a per-run rewrite.
+        updated_at = now_iso if (changed or not prior.get("updated_at")) else prior["updated_at"]
+        state[uid] = {
+            "sequence": sequence,
+            "fingerprint": fingerprint,
+            "updated_at": updated_at,
+        }
 
         start = game.start_utc
         end = game.end_utc
@@ -195,7 +208,7 @@ def render(
         lines += [
             "BEGIN:VEVENT",
             f"UID:{uid}",
-            f"DTSTAMP:{_stamp(now)}",
+            f"DTSTAMP:{_stamp(datetime.fromisoformat(updated_at))}",
             f"DTSTART:{_stamp(start)}",
             f"DTEND:{_stamp(end)}",
             f"SEQUENCE:{sequence}",

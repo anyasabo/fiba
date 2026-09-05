@@ -62,19 +62,19 @@ def cmd_fetch_logos(args) -> int:
 
 
 def cmd_scrape_rosters(args) -> int:
-    entries, unknown = tracker_mod.scrape_squads(refresh=args.refresh)
+    entries, failures = tracker_mod.scrape_squads(refresh=args.refresh)
     if not entries:
-        print("parsed no squads at all -- the article structure has moved", file=sys.stderr)
+        print("parsed no squads at all -- the page structure has moved", file=sys.stderr)
         return 1
     merged = tracker_mod.merge_and_write(entries)
 
     final = sorted(c for c, e in merged.items() if e["final_twelve"])
+    wnba = sum(len(e.get("wnba") or {}) for e in merged.values())
     print(f"parsed {len(entries)} national squads; {len(merged)} on file")
-    print(f"{len(final)} have named a final twelve: {', '.join(final)}")
-    for name in unknown:
-        print(
-            f"  warning: tracker lists {name!r}, which is not a competing nation", file=sys.stderr
-        )
+    print(f"{len(final)} have cut to a final twelve: {', '.join(final)}")
+    print(f"{wnba} squad members are listed at a WNBA club")
+    for f in failures:
+        print(f"  warning: {f}", file=sys.stderr)
     return 0
 
 

@@ -9,7 +9,7 @@ from __future__ import annotations
 import base64
 import json
 from collections import defaultdict
-from datetime import UTC, datetime
+from datetime import datetime
 from html import escape
 from zoneinfo import ZoneInfo
 
@@ -505,7 +505,6 @@ def render(
             f" {escape(viewer_country.upper())} only)</span>"
         )
 
-    generated = datetime.now(UTC).strftime("%-d %B %Y, %H:%M UTC")
     payload = _payload(tournament)
     tzkey = json.dumps(tz.key)
     cc = json.dumps(viewer_country.upper())
@@ -530,7 +529,7 @@ def render(
 <div id="schedule">{"".join(body)}</div>
 {_nations_html(tournament)}
 {_index_html(tournament)}
-<footer>Generated {generated} from the FIBA schedule and fiba.basketball.
+<footer>Generated from the FIBA schedule and fiba.basketball.
 Bold names are on confirmed rosters; italics are still in a preselect pool.</footer>
 </div>
 <script>window.__FIBA__={payload};Object.assign(window.__FIBA__,{{tz:{tzkey},cc:{cc}}});</script>

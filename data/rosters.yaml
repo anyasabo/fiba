@@ -1,19 +1,22 @@
 # WNBA players on 2026 FIBA World Cup national teams.
 #
-# Transcribed by hand from High Post Hoops, "Every WNBA player who will
-# play in the 2026 FIBA World Cup in Berlin", 7 Aug 2026.
-# Re-download it with `uv run fiba-wwc fetch-sources`.
+# Transcribed by hand, originally from High Post Hoops, "Every WNBA player who
+# will play in the 2026 FIBA World Cup in Berlin", 7 Aug 2026, and reconciled
+# against WNBA.com's official list, as of 3 Sep 2026, and FIBA's published twelves.
+# Re-download the sources with `uv run fiba-wwc fetch-sources`.
 #
-# status: confirmed   -- named on a finalised national-team roster
-#         unconfirmed -- in a preselect pool / expected but not yet named.
-#                        These came from the article's "Others:" paragraphs.
+# status: confirmed   -- on the twelve their federation has published
+#         unconfirmed -- in a preselect pool / expected but not yet named
 #
-# Keyed by FIBA tricode (must match data/schedule.yaml `teams`). Nigeria and
-# Puerto Rico have no WNBA players in the source article and so have no entry.
+# `fiba-wwc check` holds this against FIBA's team pages both ways: a player
+# here who is not in her nation's twelve fails, and so does a squad member at a
+# WNBA club who is missing from here. A mid-tournament injury replacement will
+# trip it, and the fix is an edit here.
 #
-# To update as rosters firm up: flip a status to confirmed, or add a line.
+# Keyed by FIBA tricode (must match data/schedule.yaml `teams`). Puerto Rico's
+# twelve contains only former WNBA players, so it has no entry.
 #
-# fiba_name: only where FIBA's roster tracker spells the player differently and
+# fiba_name: only where FIBA spells the player differently and
 # OURS is the spelling to keep -- a current surname FIBA has not caught up with,
 # a diacritic it strips, a given name it shortens, or Chinese surname-first
 # order. It means "reviewed, keeping ours" and stops `check` reporting the
@@ -26,13 +29,13 @@ USA:
   - {name: Paige Bueckers,     wnba: DAL, status: confirmed}
   - {name: Aliyah Boston,      wnba: IND, status: confirmed}
   - {name: Caitlin Clark,      wnba: IND, status: confirmed}
-  - {name: A'ja Wilson,        wnba: LVA, status: confirmed, fiba_name: A’ja Wilson}
   - {name: Jackie Young,       wnba: LVA, status: confirmed}
   - {name: Chelsea Gray,       wnba: LVA, status: confirmed}
   - {name: Napheesa Collier,   wnba: MIN, status: confirmed}
   - {name: Breanna Stewart,    wnba: NYL, status: confirmed}
-  - {name: Kelsey Plum,        wnba: PHX, status: confirmed}
   - {name: Kahleah Copper,     wnba: PHX, status: confirmed}
+  - {name: Sonia Citron,       wnba: WAS, status: confirmed}
+  - {name: Kiki Iriafen,       wnba: WAS, status: confirmed}
 
 AUS:
   - {name: Isobel Borlase,     wnba: ATL, status: confirmed}
@@ -59,26 +62,26 @@ BEL:
   - {name: Julie Allemand,     wnba: TOR, status: confirmed}
 
 GER:
-  - {name: Frieda Bühner,      wnba: POR, status: confirmed}
+  - {name: Frieda Bühner,      wnba: POR, status: confirmed, fiba_name: Frieda Buhner}
   - {name: Luisa Geiselsöder,  wnba: POR, status: confirmed, fiba_name: Luisa Geiselsoder}
   - {name: Nyara Sabally,      wnba: TOR, status: confirmed}
-  # Satou Sabally has been ruled out. Fiebich is hoped for but unannounced.
-  - {name: Leonie Fiebich,     wnba: NYL, status: unconfirmed}
+  # Satou Sabally was ruled out; Fiebich is on the published twelve.
+  - {name: Leonie Fiebich,     wnba: NYL, status: confirmed}
 
 ESP:
   - {name: Awa Fam,            wnba: SEA, status: confirmed}
   - {name: María Conde,        wnba: TOR, status: confirmed, fiba_name: Maria Conde}
-  - {name: Raquel Carrera,     wnba: NYL, status: unconfirmed}
-  - {name: Megan DiLeo,        wnba: POR, status: unconfirmed, fiba_name: Megan Gustafson}
-  - {name: Alicia Flórez,      wnba: WAS, status: unconfirmed, fiba_name: Alicia Florez}
+  - {name: Elena Buenavida,    wnba: MIN, status: confirmed}
+  - {name: Raquel Carrera,     wnba: NYL, status: confirmed}
+  - {name: Megan DiLeo,        wnba: POR, status: confirmed, fiba_name: Megan Gustafson}
+  - {name: Alicia Flórez,      wnba: WAS, status: confirmed, fiba_name: Alicia Florez}
 
 ITA:
   - {name: Cecilia Zandalasini, wnba: GSV, status: confirmed}
-  - {name: Costanza Verona,     wnba: DAL, status: unconfirmed}
+  - {name: Costanza Verona,     wnba: DAL, status: confirmed}
 
 CHN:
-  - {name: Li Yueru,           wnba: DAL, status: unconfirmed, fiba_name: Yueru Li}
-  - {name: Han Xu,             wnba: NYL, status: unconfirmed, fiba_name: Xu Han}
+  - {name: Han Xu,             wnba: NYL, status: confirmed, fiba_name: Xu Han}
 
 TUR:
   - {name: Kennedy Burke,      wnba: CON, status: confirmed}
@@ -95,5 +98,9 @@ JPN:
 KOR:
   - {name: Jihyun Park,        wnba: LAS, status: confirmed}
 
+NGR:
+  - {name: Elizabeth Balogun,  wnba: NYL, status: confirmed}
+  - {name: Amy Okonkwo,        wnba: POR, status: confirmed}
+
 MLI:
-  - {name: Sika Koné,          wnba: ATL, status: unconfirmed, fiba_name: Sika Kone}
+  - {name: Sika Koné,          wnba: ATL, status: confirmed, fiba_name: Sika Kone}

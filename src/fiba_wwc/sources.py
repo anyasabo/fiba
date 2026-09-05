@@ -35,7 +35,14 @@ SOURCES_LIST = (
         "wnba-players.html",
         "https://highposthoops.com/"
         "every-wnba-player-who-will-play-in-the-2026-fiba-world-cup-in-berlin",
-        "High Post Hoops, 7 Aug 2026; data/rosters.yaml was transcribed from it by hand",
+        "High Post Hoops, 7 Aug 2026; data/rosters.yaml was first transcribed from it",
+    ),
+    Source(
+        "wnba-rosters.html",
+        "https://www.wnba.com/news/2026-fiba-womens-basketball-world-cup-wnba-rosters",
+        "WNBA.com's own list as of 3 Sep 2026, 51 current and 19 former players; "
+        "data/rosters.yaml was reconciled against it and it is the source for the "
+        "developmental players FIBA lists at a European club",
     ),
 )
 

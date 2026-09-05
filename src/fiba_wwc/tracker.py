@@ -1,36 +1,34 @@
-"""Scrape FIBA's official roster tracker for the national squads.
+"""Scrape FIBA's team pages for the national squads.
 
-The tracker is a news article, not a data endpoint: a Contentful rich-text
-document embedded in the same Next.js flight payload the game pages use. Each
-nation is a ``heading-2`` followed by one paragraph of comma-separated names and
-an optional "Announcement" hyperlink to the federation's own release.
+Every nation has a page at ``/en/events/<event>/teams/<slug>``, and the same
+Next.js flight payload the game pages use carries a structured roster object on
+it: a player record per squad member with a shirt number, a club, and -- the
+part that matters -- ``isOnFinalRoster``. That flag is FIBA's own answer to
+"has this federation cut to a playing twelve", so ``final_twelve`` below is a
+reading of the source rather than an inference from how long a list is.
+
+This replaced the roster-tracker news article, which was prose in a Contentful
+rich-text document and went stale without any outward sign: with the tournament
+under way and all sixteen squads locked, it still described eight of them as
+preselect pools, and nothing in the data said otherwise.
 
 What it is good for and what it is not
 --------------------------------------
-It is the only official source for **which names a federation has published**,
-and the article says so itself:
+The team page is authoritative for *who is on the twelve*, and it carries each
+player's club, so it can also say which of them play in the WNBA. That goes
+under ``wnba`` and lets ``fiba-wwc check`` catch a WNBA player in a squad that
+data/rosters.yaml has missed, and one of ours who is not in the squad at all.
 
-    Rosters displayed on this page have been extracted from information made
-    public by the relevant National Member Federations but do not necessarily
-    correspond to the rosters that will play in the FIBA Women's Basketball
-    World Cup 2026.
+It cannot see a WNBA developmental player whose FIBA club is her European one
+-- Elizabeth Balogun reads as Valencia here, not New York -- so ``wnba`` is a
+floor, not the whole mapping. data/rosters.yaml still owns that and stays
+hand-edited.
 
-So it does NOT decide ``status`` in data/rosters.yaml. A federation can confirm
-an individual player long before it publishes a final twelve, and the tracker
-cannot express that. ``final_twelve`` here means only "this list is exactly 12
-names long" -- a useful signal that a squad has been cut, never a per-player
-verdict.
-
-It also carries no club affiliation, so it can never tell us who is a WNBA
-player. data/rosters.yaml owns that mapping and stays hand-edited.
-
-The Announcement link is NOT a finality signal, despite looking like one:
-Hungary (25 names), Spain (21) and Türkiye (20) all link to a federation release
-announcing a *pool*, while China, Germany and Nigeria list a pool with no link.
-
-Output is merged into data/fiba_rosters.yaml and committed, so that re-running
-this as federations name their squads shows up as a reviewable ``git diff`` --
-a nation dropping from 23 names to 12 is the thing worth noticing.
+A twelve is not frozen once the tournament starts: an injury replacement
+rewrites one mid-event. So this is built to be re-run. Output is merged into
+data/fiba_rosters.yaml a nation at a time and committed, which means a squad
+changing under us shows up as a reviewable ``git diff`` -- and fails ``check``
+until rosters.yaml is brought back in line.
 """
 
 from __future__ import annotations
@@ -41,74 +39,66 @@ import unicodedata
 import httpx
 import yaml
 
-from .paths import FIBA_ROSTERS_YAML, SCHEDULE_YAML
+from .paths import FIBA_ROSTERS_YAML, SCHEDULE_YAML, WNBA_TEAMS_YAML
 from .scrape import BASE, UA, fetch, find_values, flight_text
 from .urls import clean_url
-
-TRACKER_URL = (
-    f"{BASE}/en/events/fiba-womens-basketball-world-cup-2026/news"
-    "/roster-tracker-fiba-womens-basketball-world-cup-2026"
-)
 
 #: A squad this size has been cut to a playing roster rather than a pool.
 FINAL_SQUAD_SIZE = 12
 
 
 # --------------------------------------------------------------------------- #
-# parsing the rich-text document
+# parsing the team pages
 # --------------------------------------------------------------------------- #
 
 
-def _node_text(node: dict) -> str:
-    if node.get("nodeType") == "text":
-        return node.get("value", "")
-    return "".join(_node_text(c) for c in node.get("content", []))
+def extract_team_slugs(html: str) -> dict[str, str]:
+    """``{FIBA tricode: url slug}`` from the event's teams listing page."""
+    for value in find_values(flight_text(html), "teams"):
+        if (
+            isinstance(value, list)
+            and value
+            and isinstance(value[0], dict)
+            and {"code", "slug"} <= value[0].keys()
+        ):
+            return {t["code"]: t["slug"] for t in value}
+    return {}
 
 
-def _richtext_body(html: str) -> list[dict] | None:
-    """The article body: the longest "content" array that has nation headings."""
-    bodies = [
-        v
-        for v in find_values(flight_text(html), "content")
-        if isinstance(v, list)
-        and any(isinstance(n, dict) and n.get("nodeType") == "heading-2" for n in v)
-    ]
-    return max(bodies, key=len) if bodies else None
+def extract_roster(html: str) -> dict | None:
+    """The roster object from one team page. None means "could not parse".
 
-
-def extract_squads(html: str) -> dict[str, dict]:
-    """``{nation name: {"players": [...], "source": url|None}}``.
-
-    Keyed on FIBA's own heading text; :func:`scrape_squads` maps that onto our
-    nation codes.
+    The page carries a second thing under the same ``roster`` key -- the i18n
+    label dictionary for the roster table -- so this tests the shape rather
+    than taking the first hit.
     """
-    body = _richtext_body(html)
-    if body is None:
-        return {}
+    for value in find_values(flight_text(html), "roster"):
+        players = value.get("players") if isinstance(value, dict) else None
+        if isinstance(players, list) and players and isinstance(players[0], dict):
+            return value
+    return None
 
-    squads: dict[str, dict] = {}
-    heading: str | None = None
-    for node in body:
-        kind = node.get("nodeType")
-        if kind == "heading-2":
-            heading = _node_text(node).strip()
-        elif kind == "paragraph" and heading:
-            # Names run up to the "(Announcement)" link; the trailing paragraph
-            # of disclaimer prose has no heading above it and is never reached.
-            text = re.sub(r"\(.*", "", _node_text(node))
-            players = [n.strip() for n in text.split(",") if n.strip()]
-            links = [
-                c["data"]["uri"]
-                for c in node.get("content", [])
-                if c.get("nodeType") == "hyperlink" and c.get("data", {}).get("uri")
-            ]
-            if players:
-                squads[heading] = {
-                    "players": players,
-                    "source": clean_url(links[0]) if links else None,
-                }
-            heading = None
-    return squads
+
+def squad_entry(roster: dict, *, source: str, clubs: dict[str, str]) -> dict:
+    """One nation's record for data/fiba_rosters.yaml.
+
+    ``clubs`` maps a WNBA club's full name to its abbreviation; a player whose
+    FIBA club is one of them is a WNBA player we can name without a hand-edit.
+    """
+    players = roster["players"]
+    names = [f"{p.get('firstName', '')} {p.get('lastName', '')}".strip() for p in players]
+    final = sum(1 for p in players if p.get("isOnFinalRoster"))
+    return {
+        "players": names,
+        "count": len(names),
+        "final_twelve": len(names) == final == FINAL_SQUAD_SIZE,
+        "wnba": {
+            name: clubs[p["clubName"]]
+            for name, p in zip(names, players, strict=True)
+            if p.get("clubName") in clubs
+        },
+        "source": source,
+    }
 
 
 # --------------------------------------------------------------------------- #
@@ -197,27 +187,44 @@ def find_player(name: str, squad: list[str], *, alias: str | None = None) -> str
 
 
 def scrape_squads(*, refresh: bool = False) -> tuple[dict[str, dict], list[str]]:
-    """Fetch the tracker and key it on our nation codes."""
-    teams = yaml.safe_load(SCHEDULE_YAML.read_text(encoding="utf-8"))["teams"]
-    code_of = {spec["name"]: code for code, spec in teams.items()}
+    """Fetch every competing nation's team page, keyed on our nation codes."""
+    schedule = yaml.safe_load(SCHEDULE_YAML.read_text(encoding="utf-8"))
+    event_slug = schedule["tournament"]["fiba_event_slug"]
+    clubs = {
+        spec["name"]: abbr
+        for abbr, spec in yaml.safe_load(WNBA_TEAMS_YAML.read_text(encoding="utf-8")).items()
+    }
 
+    entries: dict[str, dict] = {}
+    failures: list[str] = []
     with httpx.Client(timeout=30, follow_redirects=True, headers={"User-Agent": UA}) as client:
-        html = fetch(client, TRACKER_URL, refresh=refresh)
+        listing = fetch(client, f"{BASE}/en/events/{event_slug}/teams", refresh=refresh)
+        slugs = extract_team_slugs(listing)
+        if not slugs:
+            raise RuntimeError(
+                "No teams array found on the listing page -- FIBA's page structure "
+                "has changed and tracker.py needs updating."
+            )
 
-    squads = extract_squads(html)
-    entries, unknown = {}, []
-    for heading, squad in squads.items():
-        code = code_of.get(heading)
-        if code is None:
-            unknown.append(heading)
-            continue
-        entries[code] = {
-            "players": squad["players"],
-            "count": len(squad["players"]),
-            "final_twelve": len(squad["players"]) == FINAL_SQUAD_SIZE,
-            "source": squad["source"],
-        }
-    return entries, unknown
+        # Driven by our own team list, so a nation FIBA adds or renames surfaces
+        # as a failure here rather than silently becoming a squad we never had.
+        for code in sorted(schedule["teams"]):
+            slug = slugs.get(code)
+            if slug is None:
+                failures.append(f"{code}: FIBA's listing has no team page")
+                continue
+            url = clean_url(f"{BASE}/en/events/{event_slug}/teams/{slug}")
+            try:
+                roster = extract_roster(fetch(client, url, refresh=refresh))
+            except Exception as exc:  # network, 404, redirect loop
+                failures.append(f"{code}: {exc}")
+                continue
+            if roster is None:
+                failures.append(f"{code}: no roster block on the team page")
+                continue
+            entries[code] = squad_entry(roster, source=url, clubs=clubs)
+
+    return entries, failures
 
 
 def load_squads() -> dict[str, dict]:
@@ -233,14 +240,14 @@ def merge_and_write(entries: dict[str, dict]) -> dict[str, dict]:
     FIBA_ROSTERS_YAML.write_text(
         "# Generated by `fiba-wwc scrape-rosters` -- do not hand-edit.\n"
         "#\n"
-        "# National squads exactly as FIBA's roster tracker publishes them. FIBA's\n"
-        "# own disclaimer: these are what federations have made public and do not\n"
-        "# necessarily match the twelve who will play. `final_twelve` means the\n"
-        "# list is 12 names long, nothing more -- it never decides a player's\n"
-        "# `status` in rosters.yaml, which stays hand-owned.\n"
+        "# National squads exactly as FIBA's own team pages publish them.\n"
+        "# `final_twelve` is FIBA's isOnFinalRoster flag across all twelve, not a\n"
+        "# guess from the list's length. `wnba` names the squad members whose FIBA\n"
+        "# club is a WNBA club -- a floor, not the whole mapping, since a\n"
+        "# developmental player is listed at her European club.\n"
         "#\n"
-        "# Committed so that re-running the scrape as federations name their\n"
-        "# squads shows up as a reviewable diff.\n\n"
+        "# Committed so that re-running the scrape shows up as a reviewable diff:\n"
+        "# a squad that changes mid-tournament is the thing worth noticing.\n\n"
         + yaml.safe_dump(merged, allow_unicode=True, sort_keys=True, width=88),
         encoding="utf-8",
     )
