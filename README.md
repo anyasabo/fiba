@@ -161,8 +161,23 @@ concatenates those chunks and pulls values out by key. This is undocumented and
 - all parsing lives in `scrape.py`; nothing else in the project knows about it
 - results are **merged**, never overwritten — a game that fails to refresh keeps
   its last good data, and the run only fails outright if *nothing* parsed
-- pages are cached under `.cache/`, so iterating on the parser costs no requests
-  (`--refresh` to bypass)
+- pages are written to `.cache/` as they are fetched, so iterating on the parser
+  costs no requests — pass `--cached` to replay them instead of re-fetching
+
+`--cached` is opt-in on purpose. The cache used to be consulted *first*, with
+`--refresh` to bypass it, which meant the documented "refresh from
+fiba.basketball" run reported a confident success without making a single
+request — replaying whatever was true when the cache was first filled. That is
+how four resolved quarterfinals sat unnoticed behind a clean scrape.
+
+### Pulling values out by key is not enough
+
+The listing page ships *two* arrays under `games`: the real 36-row one, and a
+two-row "up next" teaser carrying only `gameId`/`status`/`date`. They swap order
+between requests, so taking the first match is a coin flip. `extract_games`
+matches on the shape of a full row (`gameName`, `teamA`, `gameDateTimeUTC`) and
+takes the longest array that qualifies; a listing shorter than `schedule.yaml`
+is reported as a warning rather than passing quietly.
 
 `fiba-wwc check` cross-checks all 24 hand-transcribed group tip-offs against
 FIBA's own `gameDateTimeUTC`, which is what caught that the tournament has 36

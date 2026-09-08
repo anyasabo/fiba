@@ -186,7 +186,7 @@ def find_player(name: str, squad: list[str], *, alias: str | None = None) -> str
 # --------------------------------------------------------------------------- #
 
 
-def scrape_squads(*, refresh: bool = False) -> tuple[dict[str, dict], list[str]]:
+def scrape_squads(*, cached: bool = False) -> tuple[dict[str, dict], list[str]]:
     """Fetch every competing nation's team page, keyed on our nation codes."""
     schedule = yaml.safe_load(SCHEDULE_YAML.read_text(encoding="utf-8"))
     event_slug = schedule["tournament"]["fiba_event_slug"]
@@ -198,7 +198,7 @@ def scrape_squads(*, refresh: bool = False) -> tuple[dict[str, dict], list[str]]
     entries: dict[str, dict] = {}
     failures: list[str] = []
     with httpx.Client(timeout=30, follow_redirects=True, headers={"User-Agent": UA}) as client:
-        listing = fetch(client, f"{BASE}/en/events/{event_slug}/teams", refresh=refresh)
+        listing = fetch(client, f"{BASE}/en/events/{event_slug}/teams", cached=cached)
         slugs = extract_team_slugs(listing)
         if not slugs:
             raise RuntimeError(
@@ -215,7 +215,7 @@ def scrape_squads(*, refresh: bool = False) -> tuple[dict[str, dict], list[str]]
                 continue
             url = clean_url(f"{BASE}/en/events/{event_slug}/teams/{slug}")
             try:
-                roster = extract_roster(fetch(client, url, refresh=refresh))
+                roster = extract_roster(fetch(client, url, cached=cached))
             except Exception as exc:  # network, 404, redirect loop
                 failures.append(f"{code}: {exc}")
                 continue

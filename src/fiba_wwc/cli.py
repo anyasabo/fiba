@@ -30,7 +30,7 @@ def cmd_scrape(args) -> int:
     result = scrape_mod.scrape(
         schedule,
         only=args.game,
-        refresh=args.refresh,
+        cached=args.cached,
     )
     merged = scrape_mod.merge_and_write(result)
 
@@ -62,7 +62,7 @@ def cmd_fetch_logos(args) -> int:
 
 
 def cmd_scrape_rosters(args) -> int:
-    entries, failures = tracker_mod.scrape_squads(refresh=args.refresh)
+    entries, failures = tracker_mod.scrape_squads(cached=args.cached)
     if not entries:
         print("parsed no squads at all -- the page structure has moved", file=sys.stderr)
         return 1
@@ -134,6 +134,24 @@ def _write(path, text: str) -> None:
     )
 
 
+def _add_cached_flag(parser: argparse.ArgumentParser) -> None:
+    """The scrape commands go to the network by default; `--cached` opts out.
+
+    It used to be the other way round -- `.cache/` was consulted first and
+    `--refresh` bypassed it -- which meant the documented "refresh from
+    fiba.basketball" run reported a clean success without making a request,
+    replaying a snapshot from whenever the cache was first filled. `--refresh`
+    is still accepted, and now describes what already happens.
+    """
+    parser.add_argument(
+        "--cached",
+        action="store_true",
+        help="reuse the .cache/ copy of each page instead of re-fetching "
+        "(for iterating on the parser offline)",
+    )
+    parser.add_argument("--refresh", action="store_true", help=argparse.SUPPRESS)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="fiba-wwc",
@@ -144,7 +162,7 @@ def main(argv: list[str] | None = None) -> int:
 
     s = sub.add_parser("scrape", help="refresh official links, matchups and broadcast listings")
     s.add_argument("--game", type=int, help="refresh only this game number")
-    s.add_argument("--refresh", action="store_true", help="bypass the .cache/ of downloaded pages")
+    _add_cached_flag(s)
     s.set_defaults(func=cmd_scrape)
 
     g = sub.add_parser("generate", help="render the schedule")
@@ -170,7 +188,7 @@ def main(argv: list[str] | None = None) -> int:
     fl.set_defaults(func=cmd_fetch_logos)
 
     sr = sub.add_parser("scrape-rosters", help="refresh national squads from FIBA's roster tracker")
-    sr.add_argument("--refresh", action="store_true", help="bypass the .cache/ copy of the page")
+    _add_cached_flag(sr)
     sr.set_defaults(func=cmd_scrape_rosters)
 
     fs = sub.add_parser(

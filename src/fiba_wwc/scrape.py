@@ -61,17 +61,26 @@ def find_values(text: str, key: str):
         yield value
 
 
+#: Keys that mark a row of the real games array. The listing page also ships a
+#: two-game "up next" teaser under the same ``games`` key, carrying only
+#: gameId/status/date -- and the two arrays swap order between requests, so
+#: taking the first hit is a coin flip that mostly lands on the teaser. Match on
+#: the shape of a full row instead, and among those take the longest.
+GAME_ROW_KEYS = frozenset({"gameName", "teamA", "gameDateTimeUTC"})
+
+
 def extract_games(html: str) -> list[dict]:
-    """The games array from the event's games listing page."""
+    """The full games array from the event's games listing page."""
+    best: list[dict] = []
     for value in find_values(flight_text(html), "games"):
         if (
             isinstance(value, list)
-            and value
+            and len(value) > len(best)
             and isinstance(value[0], dict)
-            and "gameId" in value[0]
+            and value[0].keys() >= GAME_ROW_KEYS
         ):
-            return value
-    return []
+            best = value
+    return best
 
 
 def extract_broadcasters(html: str) -> list[dict] | None:
@@ -118,12 +127,19 @@ def game_page_url(game: dict, event_slug: str) -> str:
 # --------------------------------------------------------------------------- #
 
 
-def fetch(client: httpx.Client, url: str, *, refresh: bool = False) -> str:
-    """GET with an on-disk cache, so iterating on the parser costs no requests."""
+def fetch(client: httpx.Client, url: str, *, cached: bool = False) -> str:
+    """GET, always leaving an on-disk copy under ``.cache/``.
+
+    Fetching is the default, and deliberately so. The whole job of a scrape is
+    to notice what FIBA has changed since last time; a cache with no expiry
+    answers that question with whatever was true the first time it ever ran,
+    and reports a confident success while doing it. ``cached=True`` is for
+    iterating on the parser offline, where the requests are the expensive part.
+    """
     CACHE.mkdir(exist_ok=True)
     key = re.sub(r"[^A-Za-z0-9._-]", "_", url)[-180:]
     path = CACHE / f"{key}.html"
-    if path.exists() and not refresh:
+    if cached and path.exists():
         return path.read_text(encoding="utf-8")
     resp = client.get(url)
     resp.raise_for_status()
@@ -144,7 +160,7 @@ def scrape(
     schedule: dict,
     *,
     only: int | None = None,
-    refresh: bool = False,
+    cached: bool = False,
 ) -> ScrapeResult:
     event_slug = schedule["tournament"]["fiba_event_slug"]
     schedule_games = schedule["games"]
@@ -152,12 +168,19 @@ def scrape(
 
     headers = {"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"}
     with httpx.Client(headers=headers, timeout=30, follow_redirects=True) as client:
-        listing = fetch(client, f"{BASE}/en/events/{event_slug}/games", refresh=refresh)
+        listing = fetch(client, f"{BASE}/en/events/{event_slug}/games", cached=cached)
         games = extract_games(listing)
         if not games:
             raise RuntimeError(
                 "No games array found in the listing payload -- FIBA's page structure "
                 "has changed and scrape.py needs updating."
+            )
+        if len(games) < len(schedule_games):
+            # A short array is how the teaser bug looked from the outside: a run
+            # that reported success having parsed a fraction of the tournament.
+            result.failures.append(
+                f"listing carried only {len(games)} games against "
+                f"{len(schedule_games)} in schedule.yaml -- check extract_games()"
             )
 
         for game in games:
@@ -180,7 +203,7 @@ def scrape(
             entry.update(_resolved_matchup(game))
 
             try:
-                page = fetch(client, url, refresh=refresh)
+                page = fetch(client, url, cached=cached)
                 casters = extract_broadcasters(page)
             except Exception as exc:  # network, 404, redirect loop
                 result.failures.append(f"game {number}: {exc}")

@@ -288,24 +288,46 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 ## Tuesday, September 8, 2026
 
-- **8:45 am or 11:45 am (slot TBA)** — [2nd A - 3rd B](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128144)  ·  Qualification to Quarter-Finals · Game 25 · _matchup TBD_
+- **8:45 am** — [Hungary vs Japan](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128145-HUN-JPN)  ·  Qualification to Quarter-Finals · Game 26
   - 🏟 Berlin: Tue 8 Sep, 17:45 · Berlin Arena
-  - 📺 Watch (US): _not yet listed_
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 🇭🇺 **Hungary** — WNBA players:
+    - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Dorka Juhász
+  - 🇯🇵 **Japan** — WNBA players:
+    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — Mai Yamamoto
 
-- **8:45 am or 11:45 am (slot TBA)** — [2nd B - 3rd A](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128145)  ·  Qualification to Quarter-Finals · Game 26 · _matchup TBD_
-  - 🏟 Berlin: Tue 8 Sep, 17:45 · Berlin Arena
-  - 📺 Watch (US): _not yet listed_
+- **11:45 am** — [Germany vs Korea](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128144-GER-KOR)  ·  Qualification to Quarter-Finals · Game 25
+  - 🏟 Berlin: Tue 8 Sep, 20:45 · Berlin Arena
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 🇩🇪 **Germany** — WNBA players:
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Leonie Fiebich
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Frieda Bühner, Luisa Geiselsöder
+    - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — Nyara Sabally
+  - 🇰🇷 **Korea** — WNBA players:
+    - **LAS** ![LAS](../assets/logos/LAS.svg) Los Angeles Sparks — Jihyun Park
 
 
 ## Wednesday, September 9, 2026
 
-- **8:45 am or 11:45 am (slot TBA)** — [3rd D - 2nd C](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128146)  ·  Qualification to Quarter-Finals · Game 27 · _matchup TBD_
+- **8:45 am** — [Puerto Rico vs China](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128147-PUR-CHN)  ·  Qualification to Quarter-Finals · Game 28
   - 🏟 Berlin: Wed 9 Sep, 17:45 · Berlin Arena
-  - 📺 Watch (US): _not yet listed_
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 🇨🇳 **China** — WNBA players:
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Han Xu
 
-- **8:45 am or 11:45 am (slot TBA)** — [3rd C - 2nd D](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128147)  ·  Qualification to Quarter-Finals · Game 28 · _matchup TBD_
-  - 🏟 Berlin: Wed 9 Sep, 17:45 · Berlin Arena
-  - 📺 Watch (US): _not yet listed_
+- **11:45 am** — [Italy vs Australia](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128146-ITA-AUS)  ·  Qualification to Quarter-Finals · Game 27
+  - 🏟 Berlin: Wed 9 Sep, 20:45 · Berlin Arena
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 🇮🇹 **Italy** — WNBA players:
+    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Costanza Verona
+    - **GSV** ![GSV](../assets/logos/GSV.svg) Golden State Valkyries — Cecilia Zandalasini
+  - 🇦🇺 **Australia** — WNBA players:
+    - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Isobel Borlase
+    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Alanna Smith
+    - **GSV** ![GSV](../assets/logos/GSV.svg) Golden State Valkyries — Miela Sowah
+    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — Stephanie Talbot
+    - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Chloe Bibby
+    - **SEA** ![SEA](../assets/logos/SEA.svg) Seattle Storm — Ezi Magbegor, Jade Melbourne
 
 
 ## Thursday, September 10, 2026

@@ -14,7 +14,7 @@ import yaml
 
 from .data import load
 from .paths import CACHE, ROSTERS_YAML, SCHEDULE_YAML, SCRAPED_YAML
-from .scrape import extract_games
+from .scrape import KNOCKOUT_NAME, extract_games
 from .tracker import find_player, load_squads
 from .urls import clean_url
 
@@ -87,6 +87,12 @@ def check_scrape_mapping(report):
 def check_times_against_fiba(report):
     """Cross-check the hand-transcribed PDF times against FIBA's gameDateTimeUTC.
 
+    Group games only. Those are the ones schedule.yaml carries a hand-typed
+    home/away and tip-off for, so they are the ones worth cross-checking. A
+    knockout tip-off is not transcribed from anything -- the scrape is where it
+    comes from -- and once a bracket slot resolves it would otherwise look like
+    a matchup schedule.yaml has never heard of.
+
     Only possible when a cached listing page is around; skipped otherwise.
     """
     pages = [p for p in CACHE.glob("*games.html")] if CACHE.exists() else []
@@ -100,6 +106,8 @@ def check_times_against_fiba(report):
     sched = {g["number"]: g for g in schedule["games"]}
     mismatches, checked = [], 0
     for fg in games:
+        if KNOCKOUT_NAME.match(fg.get("gameName") or ""):
+            continue  # bracket slot: its time comes from the scrape, not the PDF
         a = (fg.get("teamA") or {}).get("code")
         b = (fg.get("teamB") or {}).get("code")
         if not (a and b):

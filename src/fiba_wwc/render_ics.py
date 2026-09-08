@@ -111,8 +111,10 @@ def _description(game: Game, viewer_country: str) -> str:
     if game.tip_utc is None:
         lines.append("")
         lines.append(
-            "Tip-off slot not yet assigned; this is the later of the two "
-            "candidate slots and will move once FIBA confirms it."
+            "Tip-off slot not yet assigned. This event deliberately spans the "
+            "whole candidate window — earliest possible tip to latest possible "
+            "final buzzer — and narrows to the exact two hours once FIBA "
+            "confirms the slot."
         )
     if game.url:
         lines.append("")
