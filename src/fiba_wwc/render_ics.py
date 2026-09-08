@@ -69,7 +69,10 @@ def _summary(game: Game, tournament: Tournament) -> str:
     if game.resolved:
         base = f"{game.home.flag} {game.home.name} vs {game.away.name} {game.away.flag}"
     else:
-        base = f"{game.label or f'Game {game.number}'} (TBD)"
+        # title() knows what FIBA has decided so far -- "USA vs Hungary/Japan"
+        # for a half-filled bracket slot -- and falls back to the schedule.yaml
+        # label when it knows nothing.
+        base = f"{game.title()} (TBD)"
     tag = f"Group {game.group}" if game.group else _phase(game)
     return f"🏀 {base} — {tag}"
 
@@ -108,6 +111,9 @@ def _description(game: Game, viewer_country: str) -> str:
         for club in sorted(by_club):
             lines.append(f"  {club}: {', '.join(sorted(by_club[club]))}")
 
+    if not game.resolved and game.matchup_note:
+        lines.append("")
+        lines.append(f"Matchup not final: {game.matchup_note}.")
     if game.tip_utc is None:
         lines.append("")
         lines.append(

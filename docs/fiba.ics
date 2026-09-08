@@ -604,13 +604,17 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-29@fiba-wwc.invalid
-DTSTAMP:20260905T031934Z
+DTSTAMP:20260908T024530Z
 DTSTART:20260910T093000Z
 DTEND:20260910T113000Z
-SEQUENCE:0
-SUMMARY:🏀 Quarter-Final 1: W27 - 1st A (TBD) — Quarter-Final
-DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
- ents/fiba-womens-basketball-world-cup-2026/games/128148
+SEQUENCE:2
+SUMMARY:🏀 Italy/Australia vs Spain (TBD) — Quarter-Final
+DESCRIPTION:Watch (US): not yet listed\n\nSpain — WNBA players:\n  Minnes
+ ota Lynx: Elena Buenavida\n  New York Liberty: Raquel Carrera\n  Portland 
+ Fire: Megan DiLeo\n  Seattle Storm: Awa Fam\n  Toronto Tempo: María Conde
+ \n  Washington Mystics: Alicia Flórez\n\nMatchup not final: winner of Gam
+ e 27.\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-worl
+ d-cup-2026/games/128148
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 LOCATION:Berlin Arena\, Berlin\, Germany
@@ -620,13 +624,18 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-30@fiba-wwc.invalid
-DTSTAMP:20260905T031934Z
+DTSTAMP:20260908T024530Z
 DTSTART:20260910T123000Z
 DTEND:20260910T143000Z
-SEQUENCE:0
-SUMMARY:🏀 Quarter-Final 2: W28 - 1st B (TBD) — Quarter-Final
-DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
- ents/fiba-womens-basketball-world-cup-2026/games/128149
+SEQUENCE:2
+SUMMARY:🏀 Puerto Rico/China vs France (TBD) — Quarter-Final
+DESCRIPTION:Watch (US): not yet listed\n\nFrance — WNBA players:\n  Conne
+ cticut Sun: Leïla Lacan\n  Golden State Valkyries: Gabby Williams\, Janel
+ le Salaün\n  New York Liberty: Marine Johannès\, Pauline Astier\n  Phoen
+ ix Mercury: Valériane Ayayi\n  Portland Fire: Carla Leite\n  Seattle Stor
+ m: Dominique Malonga\n\nMatchup not final: winner of Game 28.\n\nhttps://w
+ ww.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/1
+ 28149
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 LOCATION:Berlin Arena\, Berlin\, Germany
@@ -636,13 +645,16 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-31@fiba-wwc.invalid
-DTSTAMP:20260905T031934Z
+DTSTAMP:20260908T024530Z
 DTSTART:20260910T154500Z
 DTEND:20260910T174500Z
-SEQUENCE:0
-SUMMARY:🏀 Quarter-Final 3: 1st C - W25 (TBD) — Quarter-Final
-DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
- ents/fiba-womens-basketball-world-cup-2026/games/128150
+SEQUENCE:2
+SUMMARY:🏀 Belgium vs Germany/Korea (TBD) — Quarter-Final
+DESCRIPTION:Watch (US): not yet listed\n\nBelgium — WNBA players:\n  Minn
+ esota Lynx: Antonia Delaere\n  Phoenix Mercury: Kyara Linskens\n  Toronto 
+ Tempo: Julie Allemand\n\nMatchup not final: winner of Game 25.\n\nhttps://
+ www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/
+ 128150
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 LOCATION:Berlin Arena\, Berlin\, Germany
@@ -652,13 +664,19 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-32@fiba-wwc.invalid
-DTSTAMP:20260905T031934Z
+DTSTAMP:20260908T024530Z
 DTSTART:20260910T184500Z
 DTEND:20260910T204500Z
-SEQUENCE:0
-SUMMARY:🏀 Quarter-Final 4: 1st D - W26 (TBD) — Quarter-Final
-DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
- ents/fiba-womens-basketball-world-cup-2026/games/128151
+SEQUENCE:2
+SUMMARY:🏀 USA vs Hungary/Japan (TBD) — Quarter-Final
+DESCRIPTION:Watch (US): not yet listed\n\nUSA — WNBA players:\n  Atlanta 
+ Dream: Angel Reese\, Rhyne Howard\n  Dallas Wings: Paige Bueckers\n  India
+ na Fever: Aliyah Boston\, Caitlin Clark\n  Las Vegas Aces: Chelsea Gray\, 
+ Jackie Young\n  Minnesota Lynx: Napheesa Collier\n  New York Liberty: Brea
+ nna Stewart\n  Phoenix Mercury: Kahleah Copper\n  Washington Mystics: Kiki
+  Iriafen\, Sonia Citron\n\nMatchup not final: winner of Game 26.\n\nhttps:
+ //www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/game
+ s/128151
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 LOCATION:Berlin Arena\, Berlin\, Germany
@@ -668,11 +686,11 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-33@fiba-wwc.invalid
-DTSTAMP:20260908T023102Z
+DTSTAMP:20260908T024530Z
 DTSTART:20260912T143000Z
 DTEND:20260912T200000Z
-SEQUENCE:2
-SUMMARY:🏀 Semi-Final: W29 - W32 (TBD) — Semi-Final
+SEQUENCE:3
+SUMMARY:🏀 Winner of Game 29 vs Winner of Game 32 (TBD) — Semi-Final
 DESCRIPTION:Watch (US): not yet listed\n\nTip-off slot not yet assigned. Th
  is event deliberately spans the whole candidate window — earliest possib
  le tip to latest possible final buzzer — and narrows to the exact two ho
@@ -687,11 +705,11 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-34@fiba-wwc.invalid
-DTSTAMP:20260908T023102Z
+DTSTAMP:20260908T024530Z
 DTSTART:20260912T143000Z
 DTEND:20260912T200000Z
-SEQUENCE:2
-SUMMARY:🏀 Semi-Final: W30 - W31 (TBD) — Semi-Final
+SEQUENCE:3
+SUMMARY:🏀 Winner of Game 30 vs Winner of Game 31 (TBD) — Semi-Final
 DESCRIPTION:Watch (US): not yet listed\n\nTip-off slot not yet assigned. Th
  is event deliberately spans the whole candidate window — earliest possib
  le tip to latest possible final buzzer — and narrows to the exact two ho
@@ -706,11 +724,11 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-35@fiba-wwc.invalid
-DTSTAMP:20260905T031934Z
+DTSTAMP:20260908T024530Z
 DTSTART:20260913T143000Z
 DTEND:20260913T163000Z
-SEQUENCE:0
-SUMMARY:🏀 3rd Place Game (TBD) — 3rd Place
+SEQUENCE:1
+SUMMARY:🏀 Loser of Game 33 vs Loser of Game 34 (TBD) — 3rd Place
 DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
  ents/fiba-womens-basketball-world-cup-2026/games/128154
 STATUS:TENTATIVE
@@ -722,11 +740,11 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-36@fiba-wwc.invalid
-DTSTAMP:20260905T031934Z
+DTSTAMP:20260908T024530Z
 DTSTART:20260913T180000Z
 DTEND:20260913T200000Z
-SEQUENCE:0
-SUMMARY:🏀 Final (TBD) — Final
+SEQUENCE:1
+SUMMARY:🏀 Winner of Game 33 vs Winner of Game 34 (TBD) — Final
 DESCRIPTION:Watch (US): not yet listed\n\nhttps://www.fiba.basketball/en/ev
  ents/fiba-womens-basketball-world-cup-2026/games/128155
 STATUS:TENTATIVE

@@ -190,7 +190,8 @@ def _game_html(
     if game.url:
         title = f'<a href="{escape(game.url)}">{title}</a>'
     if not game.resolved:
-        title += ' <span class="tbd">— matchup TBD</span>'
+        note = escape(game.matchup_note or "matchup TBD")
+        title += f' <span class="tbd">— {note}</span>'
 
     tag = f"Group {game.group}" if game.group else PHASE_NAMES.get(game.phase, game.phase)
     meta = [

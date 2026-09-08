@@ -102,7 +102,7 @@ def render(
 
             head = f"- **{when}** — {title}  ·  {tag} · Game {g.number}"
             if not g.resolved:
-                head += " · _matchup TBD_"
+                head += f" · _{g.matchup_note or 'matchup TBD'}_"
             out.append(head)
 
             meta = [f"Berlin: {berlin_dt.strftime('%a %-d %b, %H:%M')}"]

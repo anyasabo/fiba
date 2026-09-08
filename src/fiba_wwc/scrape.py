@@ -232,22 +232,29 @@ def _is_unresolved(game: dict) -> bool:
 
 
 def _resolved_matchup(game: dict) -> dict:
-    """Teams and tip-off, but only once FIBA has actually decided them.
+    """Whatever FIBA has decided about this row: teams, their origin, tip-off.
 
-    A bracket slot sits in the listing from day one with empty team codes and a
-    22:00 UTC placeholder. Both facts flip together when the matchup is decided,
-    so non-empty team codes are the signal that everything on the row is real.
+    A bracket slot fills in one side at a time. A quarter-final reads "USA vs
+    Winner of Game 26" for two days before the other half lands, so each side is
+    taken on its own rather than held back waiting for the pair -- the earlier
+    version of this required both and threw the known half away.
 
-    The time is still checked separately: 22:00 UTC is midnight in Berlin and no
-    game tips then, so that value is a sentinel whatever the teams say.
+    ``teamAFrom``/``teamBFrom`` carry FIBA's own wording for where a side comes
+    from ("Winner of Game 26", "1st of group D"). Those are kept for both sides
+    whether or not the side has resolved, because they are what a still-pending
+    half is rendered as, and what lets it be traced to the game that decides it.
+
+    The tip-off is judged on its own too: 22:00 UTC is midnight in Berlin and no
+    game tips then, so that value is a placeholder whatever the teams say -- and
+    any other value is a real slot even while the matchup is not.
     """
-    if _is_unresolved(game):
-        return {}
+    out = {}
+    for side, key in (("teamA", "home"), ("teamB", "away")):
+        if code := (game.get(side) or {}).get("code"):
+            out[key] = code
+        if origin := game.get(f"{side}From"):
+            out[f"{key}_from"] = origin
 
-    out = {
-        "home": (game.get("teamA") or {}).get("code"),
-        "away": (game.get("teamB") or {}).get("code"),
-    }
     raw = game.get("gameDateTimeUTC")
     if raw:
         try:

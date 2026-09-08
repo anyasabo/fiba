@@ -106,10 +106,22 @@ re-checking.
 
 **A knockout matchup is decided.** Nothing to edit — `uv run fiba-wwc scrape &&
 uv run fiba-wwc generate`. A bracket slot sits in FIBA's listing from day one
-with empty team codes and a 22:00 UTC placeholder; both flip together when the
-matchup is decided, so non-empty team codes are the signal that the row is real.
-The scrape picks up the teams and the actual tip-off, and `schedule.yaml` keeps
-only the PDF-derived skeleton (date, candidate slots, "2nd A - 3rd B").
+with empty team codes and a 22:00 UTC placeholder, and the scrape picks up the
+teams and the actual tip-off as they land. `schedule.yaml` keeps only the
+PDF-derived skeleton (date, candidate slots, "2nd A - 3rd B").
+
+A slot fills in **one side at a time**, and both halves are shown as they
+arrive. FIBA publishes each side's origin (`1st of group D`, `Winner of Game
+26`) alongside whichever team code it has settled, so a quarter-final reads
+`USA vs Hungary/Japan · winner of Game 26` once its feeder is decided — the two
+candidate nations, with the game that picks between them. The decided half also
+brings its WNBA players with it. Resolution is one step deep on purpose: a
+semi-final fed by an unplayed quarter-final has four possible nations, not two,
+so it keeps FIBA's own `Winner of Game 29 vs Winner of Game 32` instead.
+
+The tip-off is judged separately from the teams — 22:00 UTC is midnight in
+Berlin and no game tips then, so that value is a placeholder whatever the teams
+say, and any other value is a real slot even while the matchup is not.
 
 A value hand-set in `schedule.yaml` still wins, so it remains available as an
 override if FIBA is wrong.
