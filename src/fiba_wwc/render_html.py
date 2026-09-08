@@ -13,7 +13,7 @@ from datetime import datetime
 from html import escape
 from zoneinfo import ZoneInfo
 
-from .data import Game, Nation, Tournament
+from .data import GAME_LENGTH, Game, Nation, Tournament
 from .paths import LOGOS
 from .render_markdown import PHASE_NAMES
 
@@ -74,9 +74,22 @@ h1{font-size:26px;margin:0 0 4px;letter-spacing:-.01em}
 .controls label{display:flex;align-items:center;gap:6px}
 .controls select{font:inherit;font-size:12px;color:var(--ink);background:var(--bg);
   border:1px solid var(--rule);border-radius:4px;padding:3px 5px;max-width:15rem}
+/* Pushed to the far end: the selects are settings, this is an action. */
+.controls button{font:inherit;font-size:12px;color:var(--ink);background:var(--panel);
+  border:1px solid var(--rule);border-radius:4px;padding:3px 10px;cursor:pointer;
+  margin-left:auto}
+.controls button:hover{border-color:var(--muted)}
+.controls button:focus-visible{outline:2px solid var(--link);outline-offset:1px}
+
+/* Jumping lands you mid-page with no sense of having arrived, so the target
+   says so itself. Colour only -- nothing moves, so it needs no motion opt-out. */
+@keyframes landed{from{background:var(--panel)}to{background:transparent}}
+.game.landed{animation:landed 2.2s ease-out}
 
 h2.day{font-size:15px;text-transform:uppercase;letter-spacing:.08em;
-  margin:30px 0 0;padding:8px 0 6px;border-bottom:1px solid var(--rule)}
+  margin:30px 0 0;padding:8px 0 6px;border-bottom:1px solid var(--rule);
+  /* Jumped-to headings stop clear of the viewport edge rather than flush. */
+  scroll-margin-top:14px}
 
 .game{padding:13px 0;border-bottom:1px solid var(--rule);
   display:grid;grid-template-columns:88px 1fr;gap:16px;
@@ -348,6 +361,9 @@ def _payload(tournament: Tournament) -> str:
             "casters": casters,
             "games": per_game,
             "countries": countries,
+            # Game length in ms, so the client can tell a game still in progress
+            # from one already finished without hardcoding a second copy of it.
+            "len": int(GAME_LENGTH.total_seconds() * 1000),
         },
         separators=(",", ":"),
         ensure_ascii=False,
@@ -358,6 +374,7 @@ CONTROLS = """
 <div class="controls" hidden>
   <label>Time zone <select id="tz"></select></label>
   <label>Watch from <select id="cc"></select></label>
+  <button type="button" id="now">Jump to now</button>
 </div>
 """
 
@@ -466,6 +483,50 @@ SCRIPT = r"""
     var lab = document.getElementById('tzlabel');
     if (lab) lab.textContent = tz;
     try { localStorage.setItem('fiba-view', JSON.stringify({ tz: tz, cc: cc })); } catch (e) {}
+  }
+
+  // "Now" is the first game that has not finished yet: the one in progress if
+  // there is one, else the next to tip. Both are what someone opening the page
+  // mid-tournament is looking for, and neither can be baked in at build time --
+  // the page is generated once and read for ten days.
+  function endOf(el) {
+    // A game whose slot is still TBA could run as late as its last option.
+    var opts = el.getAttribute('data-opts');
+    var last = opts ? opts.split(',').pop() : el.getAttribute('data-utc');
+    return new Date(last).getTime() + (D.len || 7200000);
+  }
+  function currentGame() {
+    var now = Date.now();
+    for (var i = 0; i < games.length; i++) {
+      if (endOf(games[i]) > now) return games[i];
+    }
+    return games[games.length - 1];  // tournament over: the final
+  }
+
+  // Scroll to the day, not the game: landing on the day heading keeps the whole
+  // day's slate on screen to scan, where centring one game pushes the heading
+  // off the top and loses the context. The game itself is flashed so it can
+  // still be picked out of the day.
+  function dayHeadingFor(el) {
+    var n = el.previousElementSibling;
+    while (n && !(n.tagName === 'H2' && n.classList.contains('day'))) {
+      n = n.previousElementSibling;
+    }
+    return n;
+  }
+
+  var nowBtn = document.getElementById('now');
+  if (nowBtn && games.length) {
+    nowBtn.addEventListener('click', function () {
+      var el = currentGame();
+      var motion = true;
+      try { motion = !matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+      var target = dayHeadingFor(el) || el;
+      target.scrollIntoView({ behavior: motion ? 'smooth' : 'auto', block: 'start' });
+      el.classList.remove('landed');
+      void el.offsetWidth;  // restart the animation when the target is unchanged
+      el.classList.add('landed');
+    });
   }
 
   tzSel.addEventListener('change', function () { tz = tzSel.value; apply(); });
