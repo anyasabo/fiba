@@ -343,9 +343,11 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
     - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — María Conde
     - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Alicia Flórez
 
-- **5:30 am** — [Puerto Rico/China vs France](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128149)  ·  Quarter-Finals · Game 30 · _winner of Game 28_
+- **5:30 am** — [China vs France](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128149-CHN-FRA)  ·  Quarter-Finals · Game 30
   - 🏟 Berlin: Thu 10 Sep, 14:30 · Berlin Arena
-  - 📺 Watch (US): _not yet listed_
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 🇨🇳 **China** — WNBA players:
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Han Xu
   - 🇫🇷 **France** — WNBA players:
     - **CON** ![CON](../assets/logos/CON.svg) Connecticut Sun — Leïla Lacan
     - **GSV** ![GSV](../assets/logos/GSV.svg) Golden State Valkyries — Gabby Williams, Janelle Salaün
@@ -388,7 +390,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
   - 🏟 Berlin: Sat 12 Sep, 16:30 · Berlin Arena
   - 📺 Watch (US): _not yet listed_
 
-- **7:30 am or 11 am (slot TBA)** — [Winner of Game 30 vs Belgium/Germany](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128153)  ·  Semi-Finals · Game 34 · _winner of Game 31_
+- **7:30 am or 11 am (slot TBA)** — [China/France vs Belgium/Germany](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128153)  ·  Semi-Finals · Game 34 · _winner of Game 30 · winner of Game 31_
   - 🏟 Berlin: Sat 12 Sep, 16:30 · Berlin Arena
   - 📺 Watch (US): _not yet listed_
 

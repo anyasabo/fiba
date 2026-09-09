@@ -94,9 +94,9 @@ fiba-wwc-2026-game-2@fiba-wwc.invalid:
   sequence: 1
   updated_at: '2026-09-05T03:56:54+00:00'
 fiba-wwc-2026-game-30@fiba-wwc.invalid:
-  fingerprint: efa5686c84ecc08c
-  sequence: 2
-  updated_at: '2026-09-08T02:45:30+00:00'
+  fingerprint: 51bff60d91551d6a
+  sequence: 3
+  updated_at: '2026-09-09T20:41:58+00:00'
 fiba-wwc-2026-game-31@fiba-wwc.invalid:
   fingerprint: cadae85239a922fe
   sequence: 3
@@ -110,9 +110,9 @@ fiba-wwc-2026-game-33@fiba-wwc.invalid:
   sequence: 4
   updated_at: '2026-09-09T02:44:48+00:00'
 fiba-wwc-2026-game-34@fiba-wwc.invalid:
-  fingerprint: 091af8689643d6ec
-  sequence: 4
-  updated_at: '2026-09-09T02:44:48+00:00'
+  fingerprint: 39dac15e522a57a2
+  sequence: 5
+  updated_at: '2026-09-09T20:41:58+00:00'
 fiba-wwc-2026-game-35@fiba-wwc.invalid:
   fingerprint: e0def29328de9d73
   sequence: 1
