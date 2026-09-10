@@ -608,22 +608,26 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-29@fiba-wwc.invalid
-DTSTAMP:20260908T024530Z
+DTSTAMP:20260910T025258Z
 DTSTART:20260910T093000Z
 DTEND:20260910T113000Z
-SEQUENCE:2
-SUMMARY:🏀 Italy/Australia vs Spain (TBD) — Quarter-Final
-DESCRIPTION:Watch (US): not yet listed\n\nSpain — WNBA players:\n  Minnes
- ota Lynx: Elena Buenavida\n  New York Liberty: Raquel Carrera\n  Portland 
- Fire: Megan DiLeo\n  Seattle Storm: Awa Fam\n  Toronto Tempo: María Conde
- \n  Washington Mystics: Alicia Flórez\n\nMatchup not final: winner of Gam
- e 27.\n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-worl
- d-cup-2026/games/128148
-STATUS:TENTATIVE
+SEQUENCE:3
+SUMMARY:🏀 🇦🇺 Australia vs Spain 🇪🇸 — Quarter-Final
+DESCRIPTION:Watch (US): Courtside 1891 (https://www.dazn.com/en-CH/competit
+ ion/Competition:66bytlledogulmhfeqyirijs3)\n\nAustralia — WNBA players:\
+ n  Atlanta Dream: Isobel Borlase\n  Dallas Wings: Alanna Smith\n  Golden S
+ tate Valkyries: Miela Sowah\n  Las Vegas Aces: Stephanie Talbot\n  Minneso
+ ta Lynx: Chloe Bibby\n  Seattle Storm: Ezi Magbegor\, Jade Melbourne\n\nSp
+ ain — WNBA players:\n  Minnesota Lynx: Elena Buenavida\n  New York Liber
+ ty: Raquel Carrera\n  Portland Fire: Megan DiLeo\n  Seattle Storm: Awa Fam
+ \n  Toronto Tempo: María Conde\n  Washington Mystics: Alicia Flórez\n\nh
+ ttps://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026
+ /games/128148-AUS-ESP
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 LOCATION:Berlin Arena\, Berlin\, Germany
 URL:https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
- 2026/games/128148
+ 2026/games/128148-AUS-ESP
 CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
@@ -694,17 +698,17 @@ CATEGORIES:Basketball\,FIBA Women World Cup 2026
 END:VEVENT
 BEGIN:VEVENT
 UID:fiba-wwc-2026-game-33@fiba-wwc.invalid
-DTSTAMP:20260909T024448Z
+DTSTAMP:20260910T025258Z
 DTSTART:20260912T143000Z
 DTEND:20260912T200000Z
-SEQUENCE:4
-SUMMARY:🏀 Winner of Game 29 vs USA/Hungary (TBD) — Semi-Final
+SEQUENCE:5
+SUMMARY:🏀 Australia/Spain vs USA/Hungary (TBD) — Semi-Final
 DESCRIPTION:Watch (US): not yet listed\n\nMatchup not final: winner of Game
-  32.\n\nTip-off slot not yet assigned. This event deliberately spans the w
- hole candidate window — earliest possible tip to latest possible final b
- uzzer — and narrows to the exact two hours once FIBA confirms the slot.\
- n\nhttps://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-
- 2026/games/128152
+  29 · winner of Game 32.\n\nTip-off slot not yet assigned. This event del
+ iberately spans the whole candidate window — earliest possible tip to la
+ test possible final buzzer — and narrows to the exact two hours once FIB
+ A confirms the slot.\n\nhttps://www.fiba.basketball/en/events/fiba-womens-
+ basketball-world-cup-2026/games/128152
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 LOCATION:Berlin Arena\, Berlin\, Germany

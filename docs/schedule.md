@@ -332,9 +332,16 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 ## Thursday, September 10, 2026
 
-- **2:30 am** — [Italy/Australia vs Spain](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128148)  ·  Quarter-Finals · Game 29 · _winner of Game 27_
+- **2:30 am** — [Australia vs Spain](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128148-AUS-ESP)  ·  Quarter-Finals · Game 29
   - 🏟 Berlin: Thu 10 Sep, 11:30 · Berlin Arena
-  - 📺 Watch (US): _not yet listed_
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 🇦🇺 **Australia** — WNBA players:
+    - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Isobel Borlase
+    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Alanna Smith
+    - **GSV** ![GSV](../assets/logos/GSV.svg) Golden State Valkyries — Miela Sowah
+    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — Stephanie Talbot
+    - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Chloe Bibby
+    - **SEA** ![SEA](../assets/logos/SEA.svg) Seattle Storm — Ezi Magbegor, Jade Melbourne
   - 🇪🇸 **Spain** — WNBA players:
     - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Elena Buenavida
     - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Raquel Carrera
@@ -386,7 +393,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 ## Saturday, September 12, 2026
 
-- **7:30 am or 11 am (slot TBA)** — [Winner of Game 29 vs USA/Hungary](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128152)  ·  Semi-Finals · Game 33 · _winner of Game 32_
+- **7:30 am or 11 am (slot TBA)** — [Australia/Spain vs USA/Hungary](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128152)  ·  Semi-Finals · Game 33 · _winner of Game 29 · winner of Game 32_
   - 🏟 Berlin: Sat 12 Sep, 16:30 · Berlin Arena
   - 📺 Watch (US): _not yet listed_
 
