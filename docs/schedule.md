@@ -334,7 +334,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 - **2:30 am** — [Australia vs Spain](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128148-AUS-ESP)  ·  Quarter-Finals · Game 29
   - 🏟 Berlin: Thu 10 Sep, 11:30 · Berlin Arena
-  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [TNT](https://www.tntsports.com/)
   - 🇦🇺 **Australia** — WNBA players:
     - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Isobel Borlase
     - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Alanna Smith
@@ -352,7 +352,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 - **5:30 am** — [China vs France](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128149-CHN-FRA)  ·  Quarter-Finals · Game 30
   - 🏟 Berlin: Thu 10 Sep, 14:30 · Berlin Arena
-  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [TNT](https://www.tntsports.com/)
   - 🇨🇳 **China** — WNBA players:
     - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Han Xu
   - 🇫🇷 **France** — WNBA players:
@@ -365,7 +365,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 - **8:45 am** — [Belgium vs Germany](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128150-BEL-GER)  ·  Quarter-Finals · Game 31
   - 🏟 Berlin: Thu 10 Sep, 17:45 · Berlin Arena
-  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [TNT](https://www.tntsports.com/)
   - 🇧🇪 **Belgium** — WNBA players:
     - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Antonia Delaere
     - **PHX** ![PHX](../assets/logos/PHX.svg) Phoenix Mercury — Kyara Linskens
@@ -377,7 +377,7 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 - **11:45 am** — [USA vs Hungary](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128151-USA-HUN)  ·  Quarter-Finals · Game 32
   - 🏟 Berlin: Thu 10 Sep, 20:45 · Berlin Arena
-  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3)
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [TNT](https://www.tntsports.com/)
   - 🇺🇸 **USA** — WNBA players:
     - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Angel Reese, Rhyne Howard
     - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Paige Bueckers
@@ -393,22 +393,49 @@ Games are grouped by *your* local day, which can differ from the Berlin match da
 
 ## Saturday, September 12, 2026
 
-- **7:30 am or 11 am (slot TBA)** — [Australia/Spain vs USA/Hungary](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128152)  ·  Semi-Finals · Game 33 · _winner of Game 29 · winner of Game 32_
+- **7:30 am** — [France vs Germany](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128153-FRA-GER)  ·  Semi-Finals · Game 34
   - 🏟 Berlin: Sat 12 Sep, 16:30 · Berlin Arena
-  - 📺 Watch (US): _not yet listed_
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [TNT](https://www.tntsports.com/)
+  - 🇫🇷 **France** — WNBA players:
+    - **CON** ![CON](../assets/logos/CON.svg) Connecticut Sun — Leïla Lacan
+    - **GSV** ![GSV](../assets/logos/GSV.svg) Golden State Valkyries — Gabby Williams, Janelle Salaün
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Marine Johannès, Pauline Astier
+    - **PHX** ![PHX](../assets/logos/PHX.svg) Phoenix Mercury — Valériane Ayayi
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Carla Leite
+    - **SEA** ![SEA](../assets/logos/SEA.svg) Seattle Storm — Dominique Malonga
+  - 🇩🇪 **Germany** — WNBA players:
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Leonie Fiebich
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Frieda Bühner, Luisa Geiselsöder
+    - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — Nyara Sabally
 
-- **7:30 am or 11 am (slot TBA)** — [China/France vs Belgium/Germany](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128153)  ·  Semi-Finals · Game 34 · _winner of Game 30 · winner of Game 31_
-  - 🏟 Berlin: Sat 12 Sep, 16:30 · Berlin Arena
-  - 📺 Watch (US): _not yet listed_
+- **11 am** — [Spain vs USA](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128152-ESP-USA)  ·  Semi-Finals · Game 33
+  - 🏟 Berlin: Sat 12 Sep, 20:00 · Berlin Arena
+  - 📺 Watch (US): [Courtside 1891](https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3) · [TNT](https://www.tntsports.com/)
+  - 🇪🇸 **Spain** — WNBA players:
+    - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Elena Buenavida
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Raquel Carrera
+    - **POR** ![POR](../assets/logos/POR.svg) Portland Fire — Megan DiLeo
+    - **SEA** ![SEA](../assets/logos/SEA.svg) Seattle Storm — Awa Fam
+    - **TOR** ![TOR](../assets/logos/TOR.svg) Toronto Tempo — María Conde
+    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Alicia Flórez
+  - 🇺🇸 **USA** — WNBA players:
+    - **ATL** ![ATL](../assets/logos/ATL.svg) Atlanta Dream — Angel Reese, Rhyne Howard
+    - **DAL** ![DAL](../assets/logos/DAL.svg) Dallas Wings — Paige Bueckers
+    - **IND** ![IND](../assets/logos/IND.svg) Indiana Fever — Aliyah Boston, Caitlin Clark
+    - **LVA** ![LVA](../assets/logos/LVA.svg) Las Vegas Aces — Chelsea Gray, Jackie Young
+    - **MIN** ![MIN](../assets/logos/MIN.svg) Minnesota Lynx — Napheesa Collier
+    - **NYL** ![NYL](../assets/logos/NYL.svg) New York Liberty — Breanna Stewart
+    - **PHX** ![PHX](../assets/logos/PHX.svg) Phoenix Mercury — Kahleah Copper
+    - **WAS** ![WAS](../assets/logos/WAS.svg) Washington Mystics — Kiki Iriafen, Sonia Citron
 
 
 ## Sunday, September 13, 2026
 
-- **7:30 am** — [Loser of Game 33 vs Loser of Game 34](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128154)  ·  3rd Place Game · Game 35 · _matchup TBD_
+- **7:30 am** — [Spain/USA vs France/Germany](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128154)  ·  3rd Place Game · Game 35 · _loser of Game 33 · loser of Game 34_
   - 🏟 Berlin: Sun 13 Sep, 16:30 · Berlin Arena
   - 📺 Watch (US): _not yet listed_
 
-- **11 am** — [Winner of Game 33 vs Winner of Game 34](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128155)  ·  Final · Game 36 · _matchup TBD_
+- **11 am** — [Spain/USA vs France/Germany](https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128155)  ·  Final · Game 36 · _winner of Game 33 · winner of Game 34_
   - 🏟 Berlin: Sun 13 Sep, 20:00 · Berlin Arena
   - 📺 Watch (US): _not yet listed_
 

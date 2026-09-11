@@ -8777,6 +8777,10 @@
     url: https://tv.cctv.com/live/cctv5/
     countries:
     - CN
+  - name: Coupang Play
+    url: http://coupangplay.com/
+    countries:
+    - KR
   - name: Courtside 1891
     url: https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3
     countries:
@@ -9099,6 +9103,10 @@
     url: https://tv.kyivstar.ua/ua/live-channels/6166e12578b43e5a4e065097-ks-tb-basketbol
     countries:
     - UA
+  - name: LA3
+    url: https://www.rti.ci
+    countries:
+    - CI
   - name: LTV7
     url: https://ltv.lsm.lv
     countries:
@@ -9159,10 +9167,6 @@
     url: null
     countries:
     - CA
-  - name: TV Slovenija 2
-    url: https://www.rtvslo.si/tv/vzivo/tvs2
-    countries:
-    - SI
   - name: Videoland sport channel
     url: https://sport.videoland.com.tw/
     countries:
@@ -9977,10 +9981,6 @@
     url: null
     countries:
     - CA
-  - name: TV Slovenija 2
-    url: https://www.rtvslo.si/tv/vzivo/tvs2
-    countries:
-    - SI
   - name: Videoland sport channel
     url: https://sport.videoland.com.tw/
     countries:
@@ -10326,6 +10326,10 @@
     url: https://tv.kyivstar.ua/en/live-channels/68a87facdf14eb24b2bce200-ks-tv-basketball-2
     countries:
     - UA
+  - name: LA3
+    url: https://www.rti.ci
+    countries:
+    - CI
   - name: LRT TELEVIZIJA
     url: http://www.lrt.lt
     countries:
@@ -10342,6 +10346,10 @@
     url: http://www.univision.mn
     countries:
     - MN
+  - name: Renouveau TV
+    url: https://renouveaugroupe.com/
+    countries:
+    - ML
   - name: RUV - Icelandic National Broadcasting Service
     url: null
     countries:
@@ -10399,10 +10407,30 @@
   away_from: 1st of group A
   tip_utc: 2026-09-10T18:45
   broadcasters:
+  - name: :SPORT
+    url: https://www.rtvs.sk/televizia/sport
+    countries:
+    - SK
+  - name: Arena sport
+    url: https://www.tvarenasport.com/tv-scheme
+    countries:
+    - RS
+  - name: beIn sports 1
+    url: http://www.beinsports.com
+    countries:
+    - FR
   - name: BTV
     url: https://srtb.bj/
     countries:
     - BJ
+  - name: CazéTV
+    url: http://youtube.com/cazetv
+    countries:
+    - BR
+  - name: CCTV5
+    url: https://tv.cctv.com/live/cctv5/
+    countries:
+    - CN
   - name: Courtside 1891
     url: https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3
     countries:
@@ -10621,6 +10649,28 @@
     url: http://www.dazn.com
     countries:
     - JP
+  - name: DAZN ITALY
+    url: http://DAZN.COM
+    countries:
+    - IT
+  - name: DIRECTV GO
+    url: http://www.directvgo.com
+    countries:
+    - AR
+    - BO
+    - CL
+    - CO
+    - EC
+    - GY
+    - PE
+    - PY
+    - SR
+    - UY
+    - VE
+  - name: ERTFLIX
+    url: https://www.ertflix.gr/
+    countries:
+    - GR
   - name: ESPN
     url: https://africa.espn.com/
     countries:
@@ -10675,6 +10725,10 @@
     url: http://ESPN.com.au
     countries:
     - AU
+  - name: ETV2
+    url: http://sport.err.ee
+    countries:
+    - EE
   - name: FIBA MONITORING
     url: https://www.courtside1891.basketball/
     countries:
@@ -10683,6 +10737,10 @@
     url: http://www.foxsports.com.mx
     countries:
     - MX
+  - name: Go3
+    url: https://go3.lv
+    countries:
+    - LV
   - name: HOY76
     url: https://hoy.tv/
     countries:
@@ -10695,10 +10753,18 @@
     url: https://www.rti.ci
     countries:
     - CI
+  - name: Magentasport Basketball
+    url: https://www.magentasport.de/basketball
+    countries:
+    - DE
   - name: Migu Tv
     url: http://www.migu.cn
     countries:
     - CN
+  - name: MOVISTAR +
+    url: https://www.movistarplus.es
+    countries:
+    - ES
   - name: PILIPINAS LIVE
     url: https://pilipinaslive.com/app/login
     countries:
@@ -10707,6 +10773,10 @@
     url: http://www.univision.mn
     countries:
     - MN
+  - name: Renouveau TV
+    url: https://renouveaugroupe.com/
+    countries:
+    - ML
   - name: RUV - Icelandic National Broadcasting Service
     url: null
     countries:
@@ -10719,10 +10789,30 @@
     url: https://www.sbc.sc
     countries:
     - SC
+  - name: Sky Italia
+    url: null
+    countries:
+    - IT
+  - name: SPORTY TV
+    url: https://sportygroup.com/
+    countries:
+    - NG
   - name: SUN+TV
     url: http://www.Sunplus.tv
     countries:
     - CM
+  - name: Teledeporte
+    url: https://www.rtve.es/play/videos/directo/deportes/
+    countries:
+    - ES
+  - name: TNT
+    url: https://www.tntsports.com/
+    countries:
+    - US
+  - name: 'TRT SPOR '
+    url: http://www.trt.net.tr
+    countries:
+    - TR
   - name: TSN (in conjunction with RDS - french language sister station)
     url: null
     countries:
@@ -10739,6 +10829,11 @@
     url: http://WAPA.TV
     countries:
     - PR
+  - name: Z SPORTS 1 HD
+    url: http://www.zap.co.ao
+    countries:
+    - AO
+    - MZ
   home: AUS
 30:
   fiba_game_id: 128149
@@ -10751,10 +10846,30 @@
   away_from: 1st of group B
   tip_utc: 2026-09-10T12:30
   broadcasters:
+  - name: ' MOVISTAR + DEPORTES'
+    url: https://www.movistarplus.es
+    countries:
+    - ES
+  - name: Arena sport
+    url: https://www.tvarenasport.com/tv-scheme
+    countries:
+    - RS
+  - name: beIn sports 1
+    url: http://www.beinsports.com
+    countries:
+    - FR
   - name: BTV
     url: https://srtb.bj/
     countries:
     - BJ
+  - name: CazéTV
+    url: http://youtube.com/cazetv
+    countries:
+    - BR
+  - name: CCTV5
+    url: https://tv.cctv.com/live/cctv5/
+    countries:
+    - CN
   - name: Courtside 1891
     url: https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3
     countries:
@@ -10973,6 +11088,14 @@
     url: http://www.dazn.com
     countries:
     - JP
+  - name: DAZN ITALY
+    url: http://DAZN.COM
+    countries:
+    - IT
+  - name: ERTFLIX
+    url: https://www.ertflix.gr/
+    countries:
+    - GR
   - name: ESPN
     url: https://africa.espn.com/
     countries:
@@ -11035,6 +11158,10 @@
     url: http://www.foxsports.com.mx
     countries:
     - MX
+  - name: Go3
+    url: https://go3.lv
+    countries:
+    - LV
   - name: HOY76
     url: https://hoy.tv/
     countries:
@@ -11047,6 +11174,10 @@
     url: https://www.rti.ci
     countries:
     - CI
+  - name: Magentasport Basketball
+    url: https://www.magentasport.de/basketball
+    countries:
+    - DE
   - name: Migu Tv
     url: http://www.migu.cn
     countries:
@@ -11059,6 +11190,10 @@
     url: http://www.univision.mn
     countries:
     - MN
+  - name: Renouveau TV
+    url: https://renouveaugroupe.com/
+    countries:
+    - ML
   - name: RUV - Icelandic National Broadcasting Service
     url: null
     countries:
@@ -11071,10 +11206,26 @@
     url: https://www.sbc.sc
     countries:
     - SC
+  - name: Sky Italia
+    url: null
+    countries:
+    - IT
+  - name: SPORTY TV
+    url: https://sportygroup.com/
+    countries:
+    - NG
   - name: SUN+TV
     url: http://www.Sunplus.tv
     countries:
     - CM
+  - name: TMC
+    url: http://WWW.tf1.fr
+    countries:
+    - FR
+  - name: TNT
+    url: https://www.tntsports.com/
+    countries:
+    - US
   - name: TSN (in conjunction with RDS - french language sister station)
     url: null
     countries:
@@ -11091,6 +11242,11 @@
     url: http://WAPA.TV
     countries:
     - PR
+  - name: Z SPORTS 1 HD
+    url: http://www.zap.co.ao
+    countries:
+    - AO
+    - MZ
   home: CHN
 31:
   fiba_game_id: 128150
@@ -11102,10 +11258,34 @@
   home_from: 1st of group C
   away_from: Winner of Game 25
   broadcasters:
+  - name: ' MOVISTAR + DEPORTES'
+    url: https://www.movistarplus.es
+    countries:
+    - ES
+  - name: Arena sport
+    url: https://www.tvarenasport.com/tv-scheme
+    countries:
+    - RS
+  - name: beIn sports 1
+    url: http://www.beinsports.com
+    countries:
+    - FR
   - name: BTV
     url: https://srtb.bj/
     countries:
     - BJ
+  - name: Canvas
+    url: http://Sporza.be
+    countries:
+    - BE
+  - name: CazéTV
+    url: http://youtube.com/cazetv
+    countries:
+    - BR
+  - name: CCTV5
+    url: https://tv.cctv.com/live/cctv5/
+    countries:
+    - CN
   - name: Courtside 1891
     url: https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3
     countries:
@@ -11320,10 +11500,22 @@
     - ZM
     - ZR
     - ZW
+  - name: CyBCHD
+    url: http://www.cybc.com.cy
+    countries:
+    - CY
   - name: DAZN
     url: http://www.dazn.com
     countries:
     - JP
+  - name: DAZN ITALY
+    url: http://DAZN.COM
+    countries:
+    - IT
+  - name: ERTFLIX
+    url: https://www.ertflix.gr/
+    countries:
+    - GR
   - name: ESPN
     url: https://africa.espn.com/
     countries:
@@ -11386,6 +11578,10 @@
     url: http://www.foxsports.com.mx
     countries:
     - MX
+  - name: Go3
+    url: https://go3.lv
+    countries:
+    - LV
   - name: HOY76
     url: https://hoy.tv/
     countries:
@@ -11398,6 +11594,14 @@
     url: https://www.rti.ci
     countries:
     - CI
+  - name: LRT PLIUS
+    url: http://www.lrt.lt
+    countries:
+    - LT
+  - name: Magentasport Basketball
+    url: https://www.magentasport.de/basketball
+    countries:
+    - DE
   - name: Migu Tv
     url: http://www.migu.cn
     countries:
@@ -11410,6 +11614,18 @@
     url: http://www.univision.mn
     countries:
     - MN
+  - name: Renouveau TV
+    url: https://renouveaugroupe.com/
+    countries:
+    - ML
+  - name: RTBF Tipik
+    url: https://www.rtbf.be/tipik
+    countries:
+    - BE
+  - name: RTP PLAY
+    url: https://www.rtp.pt/play/direto
+    countries:
+    - PT
   - name: RUV - Icelandic National Broadcasting Service
     url: null
     countries:
@@ -11422,10 +11638,22 @@
     url: https://www.sbc.sc
     countries:
     - SC
+  - name: Sky Italia
+    url: null
+    countries:
+    - IT
+  - name: SPORTY TV
+    url: https://sportygroup.com/
+    countries:
+    - NG
   - name: SUN+TV
     url: http://www.Sunplus.tv
     countries:
     - CM
+  - name: TNT
+    url: https://www.tntsports.com/
+    countries:
+    - US
   - name: TSN (in conjunction with RDS - french language sister station)
     url: null
     countries:
@@ -11455,10 +11683,30 @@
   home_from: 1st of group D
   away_from: Winner of Game 26
   broadcasters:
+  - name: 5PLUS
+    url: https://www.sport5.co.il
+    countries:
+    - IL
+  - name: Arena sport
+    url: https://www.tvarenasport.com/tv-scheme
+    countries:
+    - RS
+  - name: beIn sports 1
+    url: http://www.beinsports.com
+    countries:
+    - FR
   - name: BTV
     url: https://srtb.bj/
     countries:
     - BJ
+  - name: CazéTV
+    url: http://youtube.com/cazetv
+    countries:
+    - BR
+  - name: CCTV5
+    url: https://tv.cctv.com/live/cctv5/
+    countries:
+    - CN
   - name: Courtside 1891
     url: https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3
     countries:
@@ -11677,6 +11925,28 @@
     url: http://www.dazn.com
     countries:
     - JP
+  - name: DAZN ITALY
+    url: http://DAZN.COM
+    countries:
+    - IT
+  - name: DIRECTV GO
+    url: http://www.directvgo.com
+    countries:
+    - AR
+    - BO
+    - CL
+    - CO
+    - EC
+    - GY
+    - PE
+    - PY
+    - SR
+    - UY
+    - VE
+  - name: ERTFLIX
+    url: https://www.ertflix.gr/
+    countries:
+    - GR
   - name: ESPN
     url: https://africa.espn.com/
     countries:
@@ -11739,6 +12009,443 @@
     url: http://www.foxsports.com.mx
     countries:
     - MX
+  - name: Georgian Public Broadcaster
+    url: null
+    countries:
+    - GE
+  - name: Go3
+    url: https://go3.lv
+    countries:
+    - LV
+  - name: HOY76
+    url: https://hoy.tv/
+    countries:
+    - HK
+  - name: KS TV | Basketball
+    url: https://tv.kyivstar.ua/ua/live-channels/6166e12578b43e5a4e065097-ks-tb-basketbol
+    countries:
+    - UA
+  - name: LA3
+    url: https://www.rti.ci
+    countries:
+    - CI
+  - name: M4 SPORT
+    url: http://www.m4sport.hu
+    countries:
+    - HU
+  - name: Magentasport Basketball
+    url: https://www.magentasport.de/basketball
+    countries:
+    - DE
+  - name: Migu Tv
+    url: http://www.migu.cn
+    countries:
+    - CN
+  - name: MOVISTAR +
+    url: https://www.movistarplus.es
+    countries:
+    - ES
+  - name: PILIPINAS LIVE
+    url: https://pilipinaslive.com/app/login
+    countries:
+    - PH
+  - name: Premier Sports 1
+    url: http://www.univision.mn
+    countries:
+    - MN
+  - name: Renouveau TV
+    url: https://renouveaugroupe.com/
+    countries:
+    - ML
+  - name: RUV - Icelandic National Broadcasting Service
+    url: null
+    countries:
+    - IS
+  - name: S SPORT
+    url: http://WWW.SSPORT.TV
+    countries:
+    - TR
+  - name: 'SBC3 '
+    url: https://www.sbc.sc
+    countries:
+    - SC
+  - name: Sky Italia
+    url: null
+    countries:
+    - IT
+  - name: SPORTY TV
+    url: https://sportygroup.com/
+    countries:
+    - NG
+  - name: SUN+TV
+    url: http://www.Sunplus.tv
+    countries:
+    - CM
+  - name: Suspilne Sport
+    url: https://suspilne.media/sport
+    countries:
+    - UA
+  - name: TNT
+    url: https://www.tntsports.com/
+    countries:
+    - US
+  - name: TSN (in conjunction with RDS - french language sister station)
+    url: null
+    countries:
+    - CA
+  - name: TVP SPORT
+    url: http://tvpsport.pl
+    countries:
+    - PL
+  - name: Videoland sport channel
+    url: https://sport.videoland.com.tw/
+    countries:
+    - TW
+  - name: WAPA 2 DEPORTES
+    url: http://WAPA.TV
+    countries:
+    - PR
+  - name: YLE TV2
+    url: http://areena.yle.fi
+    countries:
+    - FI
+  - name: Z SPORTS 1 HD
+    url: http://www.zap.co.ao
+    countries:
+    - AO
+    - MZ
+  away: HUN
+  tip_utc: 2026-09-10T09:30
+33:
+  fiba_game_id: 128152
+  fiba_game_name: 29925-33-A
+  url: https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128152-ESP-USA
+  venue: Berlin Arena
+  matchup_label: ESP - USA
+  home_from: Winner of Game 29
+  away_from: Winner of Game 32
+  broadcasters:
+  - name: 5STARS
+    url: https://www.sport5.co.il
+    countries:
+    - IL
+  - name: Arena sport
+    url: https://www.tvarenasport.com/tv-scheme
+    countries:
+    - RS
+  - name: BTV
+    url: https://srtb.bj/
+    countries:
+    - BJ
+  - name: Coupang Play
+    url: http://coupangplay.com/
+    countries:
+    - KR
+  - name: Courtside 1891
+    url: https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3
+    countries:
+    - AD
+    - AE
+    - AF
+    - AG
+    - AL
+    - AM
+    - AN
+    - AO
+    - AR
+    - AS
+    - AT
+    - AW
+    - AZ
+    - BA
+    - BB
+    - BD
+    - BE
+    - BF
+    - BG
+    - BH
+    - BI
+    - BJ
+    - BM
+    - BN
+    - BO
+    - BR
+    - BS
+    - BT
+    - BW
+    - BY
+    - BZ
+    - CD
+    - CF
+    - CG
+    - CH
+    - CI
+    - CK
+    - CL
+    - CM
+    - CN
+    - CO
+    - CR
+    - CS
+    - CU
+    - CV
+    - CY
+    - CZ
+    - DE
+    - DJ
+    - DK
+    - DM
+    - DO
+    - DZ
+    - EC
+    - EE
+    - EG
+    - ER
+    - ES
+    - ET
+    - FI
+    - FJ
+    - FM
+    - FR
+    - GA
+    - GB
+    - GD
+    - GE
+    - GH
+    - GI
+    - GM
+    - GN
+    - GQ
+    - GR
+    - GT
+    - GU
+    - GW
+    - GY
+    - HK
+    - HN
+    - HR
+    - HT
+    - HU
+    - ID
+    - IE
+    - IL
+    - IN
+    - IQ
+    - IR
+    - IS
+    - IT
+    - JM
+    - JO
+    - JP
+    - KE
+    - KG
+    - KH
+    - KI
+    - KM
+    - KN
+    - KP
+    - KR
+    - KW
+    - KY
+    - KZ
+    - LA
+    - LB
+    - LC
+    - LI
+    - LK
+    - LR
+    - LS
+    - LT
+    - LU
+    - LV
+    - LY
+    - MA
+    - MC
+    - MD
+    - ME
+    - MG
+    - MH
+    - MK
+    - ML
+    - MM
+    - MN
+    - MR
+    - MS
+    - MT
+    - MU
+    - MV
+    - MW
+    - MX
+    - MY
+    - MZ
+    - NA
+    - NE
+    - NG
+    - NI
+    - NL
+    - 'NO'
+    - NP
+    - NR
+    - OM
+    - PA
+    - PE
+    - PG
+    - PH
+    - PK
+    - PL
+    - PR
+    - PS
+    - PT
+    - PW
+    - PY
+    - QA
+    - RO
+    - RS
+    - RU
+    - RW
+    - SA
+    - SB
+    - SC
+    - SD
+    - SE
+    - SG
+    - SI
+    - SK
+    - SL
+    - SM
+    - SN
+    - SO
+    - SR
+    - SS
+    - ST
+    - SU
+    - SV
+    - SY
+    - SZ
+    - TD
+    - TG
+    - TH
+    - TJ
+    - TL
+    - TM
+    - TN
+    - TO
+    - TR
+    - TT
+    - TV
+    - TW
+    - TZ
+    - UA
+    - UG
+    - US
+    - UY
+    - UZ
+    - VC
+    - VE
+    - VG
+    - VI
+    - VN
+    - VU
+    - WS
+    - XK
+    - YE
+    - YU
+    - ZA
+    - ZM
+    - ZR
+    - ZW
+  - name: DAZN
+    url: http://www.dazn.com
+    countries:
+    - JP
+  - name: DIRECTV GO
+    url: http://www.directvgo.com
+    countries:
+    - AR
+    - BO
+    - CL
+    - CO
+    - EC
+    - GY
+    - PE
+    - PY
+    - SR
+    - UY
+    - VE
+  - name: ERTFLIX
+    url: https://www.ertflix.gr/
+    countries:
+    - GR
+  - name: ESPN
+    url: https://africa.espn.com/
+    countries:
+    - AO
+    - BF
+    - BI
+    - BJ
+    - BW
+    - CD
+    - CF
+    - CG
+    - CI
+    - CM
+    - CV
+    - DJ
+    - ER
+    - ET
+    - GA
+    - GH
+    - GM
+    - GN
+    - GQ
+    - GW
+    - KE
+    - KM
+    - LR
+    - LS
+    - MG
+    - ML
+    - MR
+    - MU
+    - MW
+    - MZ
+    - NA
+    - NE
+    - NG
+    - RW
+    - SC
+    - SD
+    - SL
+    - SN
+    - SO
+    - SS
+    - TD
+    - TG
+    - TZ
+    - UG
+    - ZA
+    - ZM
+    - ZW
+  - name: ESPN Australia
+    url: http://ESPN.com.au
+    countries:
+    - AU
+  - name: FIBA MONITORING
+    url: https://www.courtside1891.basketball/
+    countries:
+    - NR
+  - name: FOD
+    url: https://fod.fujitv.co.jp/
+    countries:
+    - JP
+  - name: Fox Sports 1,2,3 or Premium
+    url: http://www.foxsports.com.mx
+    countries:
+    - MX
+  - name: Go3
+    url: https://go3.lv
+    countries:
+    - LV
   - name: HOY76
     url: https://hoy.tv/
     countries:
@@ -11763,6 +12470,10 @@
     url: http://www.univision.mn
     countries:
     - MN
+  - name: Renouveau TV
+    url: https://renouveaugroupe.com/
+    countries:
+    - ML
   - name: RUV - Icelandic National Broadcasting Service
     url: null
     countries:
@@ -11775,10 +12486,18 @@
     url: https://www.sbc.sc
     countries:
     - SC
+  - name: SPORTY TV
+    url: https://sportygroup.com/
+    countries:
+    - NG
   - name: SUN+TV
     url: http://www.Sunplus.tv
     countries:
     - CM
+  - name: TNT
+    url: https://www.tntsports.com/
+    countries:
+    - US
   - name: TSN (in conjunction with RDS - french language sister station)
     url: null
     countries:
@@ -11795,29 +12514,428 @@
     url: http://WAPA.TV
     countries:
     - PR
+  - name: Yle Areena
+    url: http://areena.yle.fi
+    countries:
+    - FI
   - name: Z SPORTS 1 HD
     url: http://www.zap.co.ao
     countries:
     - AO
     - MZ
-  away: HUN
-  tip_utc: 2026-09-10T09:30
-33:
-  fiba_game_id: 128152
-  fiba_game_name: 29925-33-A
-  url: https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128152
-  venue: Berlin Arena
-  matchup_label: Winner of Game 29 - Winner of Game 32
-  home_from: Winner of Game 29
-  away_from: Winner of Game 32
+  home: ESP
+  away: USA
+  tip_utc: 2026-09-12T18:00
 34:
   fiba_game_id: 128153
   fiba_game_name: 29925-34-A
-  url: https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128153
+  url: https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128153-FRA-GER
   venue: Berlin Arena
-  matchup_label: Winner of Game 30 - Winner of Game 31
+  matchup_label: FRA - GER
   home_from: Winner of Game 30
   away_from: Winner of Game 31
+  broadcasters:
+  - name: 5STARS
+    url: https://www.sport5.co.il
+    countries:
+    - IL
+  - name: Arena sport
+    url: https://www.tvarenasport.com/tv-scheme
+    countries:
+    - RS
+  - name: BTV
+    url: https://srtb.bj/
+    countries:
+    - BJ
+  - name: Coupang Play
+    url: http://coupangplay.com/
+    countries:
+    - KR
+  - name: Courtside 1891
+    url: https://www.dazn.com/en-CH/competition/Competition:66bytlledogulmhfeqyirijs3
+    countries:
+    - AD
+    - AE
+    - AF
+    - AG
+    - AL
+    - AM
+    - AN
+    - AO
+    - AR
+    - AS
+    - AT
+    - AW
+    - AZ
+    - BA
+    - BB
+    - BD
+    - BE
+    - BF
+    - BG
+    - BH
+    - BI
+    - BJ
+    - BM
+    - BN
+    - BO
+    - BR
+    - BS
+    - BT
+    - BW
+    - BY
+    - BZ
+    - CD
+    - CF
+    - CG
+    - CH
+    - CI
+    - CK
+    - CL
+    - CM
+    - CN
+    - CO
+    - CR
+    - CS
+    - CU
+    - CV
+    - CY
+    - CZ
+    - DE
+    - DJ
+    - DK
+    - DM
+    - DO
+    - DZ
+    - EC
+    - EE
+    - EG
+    - ER
+    - ES
+    - ET
+    - FI
+    - FJ
+    - FM
+    - FR
+    - GA
+    - GB
+    - GD
+    - GE
+    - GH
+    - GI
+    - GM
+    - GN
+    - GQ
+    - GR
+    - GT
+    - GU
+    - GW
+    - GY
+    - HK
+    - HN
+    - HR
+    - HT
+    - HU
+    - ID
+    - IE
+    - IL
+    - IN
+    - IQ
+    - IR
+    - IS
+    - IT
+    - JM
+    - JO
+    - JP
+    - KE
+    - KG
+    - KH
+    - KI
+    - KM
+    - KN
+    - KP
+    - KR
+    - KW
+    - KY
+    - KZ
+    - LA
+    - LB
+    - LC
+    - LI
+    - LK
+    - LR
+    - LS
+    - LT
+    - LU
+    - LV
+    - LY
+    - MA
+    - MC
+    - MD
+    - ME
+    - MG
+    - MH
+    - MK
+    - ML
+    - MM
+    - MN
+    - MR
+    - MS
+    - MT
+    - MU
+    - MV
+    - MW
+    - MX
+    - MY
+    - MZ
+    - NA
+    - NE
+    - NG
+    - NI
+    - NL
+    - 'NO'
+    - NP
+    - NR
+    - OM
+    - PA
+    - PE
+    - PG
+    - PH
+    - PK
+    - PL
+    - PR
+    - PS
+    - PT
+    - PW
+    - PY
+    - QA
+    - RO
+    - RS
+    - RU
+    - RW
+    - SA
+    - SB
+    - SC
+    - SD
+    - SE
+    - SG
+    - SI
+    - SK
+    - SL
+    - SM
+    - SN
+    - SO
+    - SR
+    - SS
+    - ST
+    - SU
+    - SV
+    - SY
+    - SZ
+    - TD
+    - TG
+    - TH
+    - TJ
+    - TL
+    - TM
+    - TN
+    - TO
+    - TR
+    - TT
+    - TV
+    - TW
+    - TZ
+    - UA
+    - UG
+    - US
+    - UY
+    - UZ
+    - VC
+    - VE
+    - VG
+    - VI
+    - VN
+    - VU
+    - WS
+    - XK
+    - YE
+    - YU
+    - ZA
+    - ZM
+    - ZR
+    - ZW
+  - name: DAZN
+    url: http://www.dazn.com
+    countries:
+    - JP
+  - name: DIRECTV GO
+    url: http://www.directvgo.com
+    countries:
+    - AR
+    - BO
+    - CL
+    - CO
+    - EC
+    - GY
+    - PE
+    - PY
+    - SR
+    - UY
+    - VE
+  - name: ERTFLIX
+    url: https://www.ertflix.gr/
+    countries:
+    - GR
+  - name: ESPN
+    url: https://africa.espn.com/
+    countries:
+    - AO
+    - BF
+    - BI
+    - BJ
+    - BW
+    - CD
+    - CF
+    - CG
+    - CI
+    - CM
+    - CV
+    - DJ
+    - ER
+    - ET
+    - GA
+    - GH
+    - GM
+    - GN
+    - GQ
+    - GW
+    - KE
+    - KM
+    - LR
+    - LS
+    - MG
+    - ML
+    - MR
+    - MU
+    - MW
+    - MZ
+    - NA
+    - NE
+    - NG
+    - RW
+    - SC
+    - SD
+    - SL
+    - SN
+    - SO
+    - SS
+    - TD
+    - TG
+    - TZ
+    - UG
+    - ZA
+    - ZM
+    - ZW
+  - name: ESPN Australia
+    url: http://ESPN.com.au
+    countries:
+    - AU
+  - name: FIBA MONITORING
+    url: https://www.courtside1891.basketball/
+    countries:
+    - NR
+  - name: FOD
+    url: https://fod.fujitv.co.jp/
+    countries:
+    - JP
+  - name: Fox Sports 1,2,3 or Premium
+    url: http://www.foxsports.com.mx
+    countries:
+    - MX
+  - name: Go3
+    url: https://go3.lv
+    countries:
+    - LV
+  - name: HOY76
+    url: https://hoy.tv/
+    countries:
+    - HK
+  - name: KS TV | Basketball 2
+    url: https://tv.kyivstar.ua/en/live-channels/68a87facdf14eb24b2bce200-ks-tv-basketball-2
+    countries:
+    - UA
+  - name: LA3
+    url: https://www.rti.ci
+    countries:
+    - CI
+  - name: Migu Tv
+    url: http://www.migu.cn
+    countries:
+    - CN
+  - name: PILIPINAS LIVE
+    url: https://pilipinaslive.com/app/login
+    countries:
+    - PH
+  - name: Premier Sports 1
+    url: http://www.univision.mn
+    countries:
+    - MN
+  - name: Renouveau TV
+    url: https://renouveaugroupe.com/
+    countries:
+    - ML
+  - name: RUV - Icelandic National Broadcasting Service
+    url: null
+    countries:
+    - IS
+  - name: S SPORT
+    url: http://WWW.SSPORT.TV
+    countries:
+    - TR
+  - name: 'SBC3 '
+    url: https://www.sbc.sc
+    countries:
+    - SC
+  - name: SPORTY TV
+    url: https://sportygroup.com/
+    countries:
+    - NG
+  - name: SUN+TV
+    url: http://www.Sunplus.tv
+    countries:
+    - CM
+  - name: TNT
+    url: https://www.tntsports.com/
+    countries:
+    - US
+  - name: TSN (in conjunction with RDS - french language sister station)
+    url: null
+    countries:
+    - CA
+  - name: TVP SPORT
+    url: http://tvpsport.pl
+    countries:
+    - PL
+  - name: Videoland sport channel
+    url: https://sport.videoland.com.tw/
+    countries:
+    - TW
+  - name: WAPA 2 DEPORTES
+    url: http://WAPA.TV
+    countries:
+    - PR
+  - name: YLE TV2
+    url: http://areena.yle.fi
+    countries:
+    - FI
+  - name: Z SPORTS 1 HD
+    url: http://www.zap.co.ao
+    countries:
+    - AO
+    - MZ
+  home: FRA
+  away: GER
+  tip_utc: 2026-09-12T14:30
 35:
   fiba_game_id: 128154
   fiba_game_name: 29926-35-A
